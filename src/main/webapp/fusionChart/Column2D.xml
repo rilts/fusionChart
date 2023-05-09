@@ -24,7 +24,7 @@
 
 scwin.onpageload = function() { 
 	scwin.setChartData();
-	scwin.setChartOption(); 
+	scwin.setChartOption();
 };
 
 
