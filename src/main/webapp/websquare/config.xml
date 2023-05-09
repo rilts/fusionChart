@@ -33,7 +33,9 @@
     <style>
         <removeDefaultClass value="true"/>
     </style>
-    <engine/>
+    <engine>
+		<module src="/cm/js/commonScope.js"/>
+    </engine>
     <ModelUtil>
         <copyChildrenNodes refresh="false"/>
     </ModelUtil>
