@@ -61,7 +61,7 @@ scwin.setChartOption = function() {
 		,xAxisName : "매출월"		//x축 명칭  
 		,yAxisName : "금액(만원)"		//y축 명칭
 	};
-	fusionchart1.setChartAttribute(attributeOptions);
+	fusionchart1.setChartAttribute(attributeOptions); 
 
 	//별도의 TrendLine 추가 (별도 라인)   
 	var trendLineOptions = {
