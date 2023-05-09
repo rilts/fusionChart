@@ -78,7 +78,7 @@ scwin.setChartOption = function() {
 	fusionchart1.setChartColumnRef(ref, labelNode, seriesColumns);
 
 	//차트 그리기 
-	fusionchart1.draw();  
+	fusionchart1.draw(); 
 };
 
 ]]></script>
