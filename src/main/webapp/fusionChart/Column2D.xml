@@ -43,7 +43,7 @@ scwin.setChartData = function(){
 		,{"month":"8월",	"data1":24000,	"data2":40000}
 		,{"month":"9월",	"data1":17000,	"data2":30000}
 		,{"month":"10월",	"data1":20000,	"data2":20000}
-		,{"month":"11월",	"data1":11000,	"data2":10000} 
+		,{"month":"11월",	"data1":11000,	"data2":10000}  
 		,{"month":"12월",	"data1":22000,	"data2":20000}
 	];
 	dlt_chartData.setJSON(jsonData); 
