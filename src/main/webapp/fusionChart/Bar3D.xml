@@ -24,7 +24,7 @@
 
 scwin.onpageload = function() {
 	scwin.setChartData();
-	scwin.setChartOption(); 
+	scwin.setChartOption();
 };
 
 
@@ -46,7 +46,7 @@ scwin.setChartData = function(){
 		,{"month":"11월",	"data1":11000,	"data2":10000}
 		,{"month":"12월",	"data1":22000,	"data2":20000}
 	];
-	dlt_chartData.setJSON(jsonData); 
+	dlt_chartData.setJSON(jsonData);
 };
 
 
@@ -57,7 +57,7 @@ scwin.setChartOption = function() {
 	//차트 Attribute 값 셋팅
 	var attributeOptions = {
 		caption	: "매출현황"		//주 타이틀 명
-		,subCaption : "Column 3D"		//부 타이틀 명
+		,subCaption : "Bar 3D"		//부 타이틀 명
 		,xAxisName : "매출월"		//x축 명칭  
 		,yAxisName : "금액(만원)"		//y축 명칭
 	};
@@ -84,7 +84,7 @@ scwin.setChartOption = function() {
 ]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload">
-		<w2:fusionchart id="fusionchart1" chartType="Column3D" ref=""
+		<w2:fusionchart id="fusionchart1" chartType="Bar3D" ref=""
 			style="position: relative ;margin:10px;height: 300px;" drawType="javascript" version="3.15">
 		</w2:fusionchart>
 	</body>
