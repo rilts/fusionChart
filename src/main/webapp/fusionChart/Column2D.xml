@@ -74,8 +74,8 @@ scwin.setChartOption = function() {
 	//차트 dataList binding (차트에 직접 binding 하지 않을 경우)   
 	var ref = "data:" + "dlt_chartData";		//연결 dataList 
 	var labelNode = "month";
-	var seriesColumns = "[['data1']]"; 		//멀티 series 일 경우 array 형태로 => [['col1','col2','col3']] 
-	fusionchart1.setChartColumnRef(ref, labelNode, seriesColumns);
+	var seriesColumns = "[['data1']]"; 		//멀티 series 일 경우 array 형태로 => [['col1','col2','col3']]
+	fusionchart1.setChartColumnRef(ref, labelNode, seriesColumns); 
 
 	//차트 그리기 
 	fusionchart1.draw(); 
