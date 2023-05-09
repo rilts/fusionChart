@@ -22,7 +22,7 @@
 		</xf:model>
 		<script type="javascript" lazy="false"><![CDATA[
 
-scwin.onpageload = function() {
+scwin.onpageload = function() { 
 	scwin.setChartData();
 	scwin.setChartOption();
 };
