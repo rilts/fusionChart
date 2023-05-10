@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="Multi-Series Stacked Column 2D Line Dual Y Combination (MSStackedColumn2DLineDY)">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo></w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+    var jsonData = {
+                    "chart": {
+                        "caption": "Quarterly Sales vs. Profit % in Last Year",
+                        "subcaption": "Product-wise Break-up - Harry's SuperMart",
+                        "xAxisName": "Quarter",
+                        "pYAxisName": "Sales",
+                        "sYAxisName": "Profit %",
+                        "numberPrefix": "$",
+                        "numbersuffix": "M",
+                        "sNumberSuffix": "%",
+                        "sYAxisMaxValue": "25",
+                        "theme": "fusion"
+                    },
+                    "categories": [
+                        {
+                            "category": [
+                                {
+                                    "label": "Q1"
+                                },
+                                {
+                                    "label": "Q2"
+                                },
+                                {
+                                    "label": "Q3"
+                                },
+                                {
+                                    "label": "Q4"
+                                }
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "dataset": [
+                                {
+                                    "seriesname": "Processed Food",
+                                    "data": [
+                                        {
+                                            "value": "30"
+                                        },
+                                        {
+                                            "value": "26"
+                                        },
+                                        {
+                                            "value": "33"
+                                        },
+                                        {
+                                            "value": "31"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "seriesname": "Un-Processed Food",
+                                    "data": [
+                                        {
+                                            "value": "21"
+                                        },
+                                        {
+                                            "value": "28"
+                                        },
+                                        {
+                                            "value": "39"
+                                        },
+                                        {
+                                            "value": "41"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "dataset": [
+                                {
+                                    "seriesname": "Electronics",
+                                    "data": [
+                                        {
+                                            "value": "27"
+                                        },
+                                        {
+                                            "value": "25"
+                                        },
+                                        {
+                                            "value": "28"
+                                        },
+                                        {
+                                            "value": "26"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "seriesname": "Apparels",
+                                    "data": [
+                                        {
+                                            "value": "17"
+                                        },
+                                        {
+                                            "value": "15"
+                                        },
+                                        {
+                                            "value": "18"
+                                        },
+                                        {
+                                            "value": "16"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "lineset": [
+                        {
+                            "seriesname": "Profit %",
+                            "showValues": "0",
+                            "data": [
+                                {
+                                    "value": "14"
+                                },
+                                {
+                                    "value": "16"
+                                },
+                                {
+                                    "value": "15"
+                                },
+                                {
+                                    "value": "17"
+                                }
+                            ]
+                        }
+                    ]
+                }
+    
+    fusionchart.setJSONData(jsonData);
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fusionchart accessibility="false" drawType="javascript" runflashAt="IE6,IE7,IE8" seriesType="simple" chartType="MSStackedColumn2DLineDY"
+    		style="position: relative ;margin:10px;height: 300px;" id="fusionchart" version="3.15">
+    	</w2:fusionchart>
+    </body>
+</html>
