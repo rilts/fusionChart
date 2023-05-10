@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+        	<w2:dataCollection baseNode="map">
+        		<w2:dataList baseNode="list" repeatNode="map" id="dlt_chartData1" saveRemovedData="true">
+        			<w2:columnInfo>
+        				<w2:column id="PassengerId" name="승객번호" dataType="text"></w2:column>
+        				<w2:column id="Survived" name="생존여부" dataType="text"></w2:column>
+        				<w2:column id="Pclass" name="승객등급" dataType="text"></w2:column>
+        				<w2:column id="Name" name="이름" dataType="text"></w2:column>
+        				<w2:column id="Sex" name="성별" dataType="text"></w2:column>
+        				<w2:column id="Age" name="나이" dataType="text"></w2:column>
+        				<w2:column id="SibSp" name="형제/배우자" dataType="text"></w2:column>
+        				<w2:column id="Parch" name="부모/자녀" dataType="text"></w2:column>
+        				<w2:column id="Ticket" name="표번호" dataType="text"></w2:column>
+        				<w2:column id="Fare" name="요금" dataType="text"></w2:column>
+        				<w2:column id="Cabin" name="객실" dataType="text"></w2:column>
+        				<w2:column id="Embarked" name="승선지" dataType="text"></w2:column>
+        			</w2:columnInfo>
+        		</w2:dataList>
+        		<w2:dataList id="dataList2" baseNode="vector2" repeatNode="item" valueNode="">
+        			<w2:columnInfo>
+        				<w2:column id="Month" name="Month" dataType="text"></w2:column>
+        				<w2:column id="Year1" name="2005" dataType="number"></w2:column>
+        				<w2:column id="Year2" name="2006" dataType="number"></w2:column>
+        				<w2:column id="Year3" name="2007" dataType="number"></w2:column>
+        			</w2:columnInfo>
+        		</w2:dataList>
+        	</w2:dataCollection>
+        	<w2:workflowCollection />
+        	<xf:submission id="sbm_chartData1" ref="" target="data:json,dlt_chartData1" action="/data/titanic.json" method="post" mediatype="application/json" encoding="UTF-8"
+        		instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.sbm_chartData1_submitdone"
+        		ev:submiterror="" abortTrigger="">
+        	</xf:submission>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+    scwin.setChartOpt();
+};
+//차트 옵션 적용
+scwin.setChartOpt = function () {
+    var data = [{"Month":"January","Year1":"27400","Year2":"10000","Year3":"10000","rowStatus":"R"},{"Month":"February","Year1":"11500","Year2":"28110","Year3":"23990","rowStatus":"R"},{"Month":"March","Year1":"12500","Year2":"29800","Year3":"32700","rowStatus":"R"},{"Month":"April","Year1":"27400","Year2":"10000","Year3":"29000","rowStatus":"R"},{"Month":"May","Year1":"1500","Year2":"10000","Year3":"10000","rowStatus":"R"},{"Month":"June","Year1":"19700","Year2":"32600","Year3":"32600","rowStatus":"R"},{"Month":"July","Year1":"27400","Year2":"29700","Year3":"31900","rowStatus":"R"},{"Month":"August","Year1":"27400","Year2":"10000","Year3":"21800","rowStatus":"R"},{"Month":"September","Year1":"27400","Year2":"31800","Year3":"42800","rowStatus":"R"},{"Month":"October","Year1":"27400","Year2":"15000","Year3":"11000","rowStatus":"R"},{"Month":"November","Year1":"27400","Year2":"9800","Year3":"11800","rowStatus":"R"},{"Month":"December","Year1":"27400","Year2":"22900","Year3":"20800","rowStatus":"R"}];
+    dataList2.setJSON(data);
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    <!--
+    	<w2:gridView checkAllType="false" scrollByColumn="false" defaultCellHeight="20" scrollByColumnAdaptive="false" id=""
+    		style="height: 500px;" dataList="data:dlt_chartData1">
+    		<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header1">
+    			<w2:row style="" id="row1">
+    				<w2:column width="70" inputType="text" style="" id="column12" value="승객번호" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column11" value="생존여부" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column10" value="승객등급" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column9" value="이름" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column8" value="성별" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column7" value="나이" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column6" value="형제/배우자" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column5" value="부모/자녀" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column4" value="표번호" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column3" value="요금" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column2" value="객실" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="column1" value="승선지" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody style="" id="gBody1">
+    			<w2:row style="" id="row2">
+    				<w2:column width="70" inputType="text" style="" id="PassengerId" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Survived" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Pclass" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Name" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Sex" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Age" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="SibSp" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Parch" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Ticket" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Fare" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Cabin" value="" displayMode="label"></w2:column>
+    				<w2:column width="70" inputType="text" style="" id="Embarked" value="" displayMode="label"></w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView>
+    	-->
+    	<w2:fusionchart chartType="MSColumn2D" drawType="javascript" id="fcMSC2d" ref="data:dataList2" labelNode="Month"  seriesColumns="[['Year1','Year2','Year3']]" style="height:280px;width:100%;"> </w2:fusionchart>
+    </body>
+</html>
