@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="realTimeChart6">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+				<w2:dataList baseNode="list" id="dataList1" repeatNode="map" saveRemovedData="true" style="">
+					<w2:columnInfo>
+						<w2:column dataType="text" id="processes" name="processes"></w2:column>
+						<w2:column dataType="text" id="task_id" name="taskID"></w2:column>
+						<w2:column dataType="text" id="tasks" name="tasks"></w2:column>
+						<w2:column dataType="text" id="startDate" name="startDate"></w2:column>
+						<w2:column dataType="text" id="endDate" name="endDate"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<processes><![CDATA[Terrace]]></processes>
+							<task_id><![CDATA[5-1]]></task_id>
+							
+							<tasks><![CDATA[Planned]]></tasks>
+							<startDate><![CDATA[05/05/2014]]></startDate>
+							<endDate><![CDATA[02/06/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Terrace]]></processes>
+							<task_id><![CDATA[5]]></task_id>
+							<tasks><![CDATA[Actual]]></tasks>
+							<startDate><![CDATA[10/05/2014]]></startDate>
+							<endDate><![CDATA[02/06/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Plumbing]]></processes>
+							<task_id><![CDATA[6-1]]></task_id>
+							<tasks><![CDATA[Planned]]></tasks>
+							<startDate><![CDATA[11/05/2014]]></startDate>
+							<endDate><![CDATA[12/06/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Plumbing]]></processes>
+							<task_id><![CDATA[6]]></task_id>
+							<tasks><![CDATA[Actual]]></tasks>
+							<startDate><![CDATA[13/05/2014]]></startDate>
+							<endDate><![CDATA[12/06/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Wood Work]]></processes>
+							<task_id><![CDATA[7-1]]></task_id>
+							<tasks><![CDATA[Planned]]></tasks>
+							<startDate><![CDATA[01/06/2014]]></startDate>
+							<endDate><![CDATA[12/07/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Wood Work]]></processes>
+							<task_id><![CDATA[7]]></task_id>
+							<tasks><![CDATA[Actual]]></tasks>
+							<startDate><![CDATA[02/06/2014]]></startDate>
+							<endDate><![CDATA[19/07/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Interiors]]></processes>
+							<task_id><![CDATA[8-1]]></task_id>
+							<tasks><![CDATA[Planned]]></tasks>
+							<startDate><![CDATA[01/06/2014]]></startDate>
+							<endDate><![CDATA[12/08/2014]]></endDate>
+						</w2:row>
+						<w2:row>
+							
+							<processes><![CDATA[Interiors]]></processes>
+							<task_id><![CDATA[8]]></task_id>
+							<tasks><![CDATA[Actual]]></tasks>
+							<startDate><![CDATA[01/06/2014]]></startDate>
+							<endDate><![CDATA[19/08/2014]]></endDate>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+    var jsonData = {
+        "chart": {
+            "dateformat": "mm/dd/yyyy",
+            "caption": "Social Media Optimization",
+            "slackFillColor": "#CC0000",
+            "theme": "fint",
+            "canvasBorderAlpha": "40"
+        },
+        "datatable": {
+            "headervalign": "bottom",
+            "datacolumn": [{
+                "headertext": "Owner",
+                "headerfontsize": "18",
+                "headervalign": "bottom",
+                "headeralign": "left",
+                "align": "left",
+                "fontsize": "12",
+                "text": [{
+                    "label": "John"
+                }, {
+                    "label": "David"
+                }, {
+                    "label": "Mary"
+                }, {
+                    "label": "John"
+                }, {
+                    "label": "Andrew & Harry"
+                }, {
+                    "label": "John & Harry"
+                }, {
+                    "label": "Neil & Harry"
+                }, {
+                    "label": "Neil & Harry"
+                }, {
+                    "label": "Chris"
+                }, {
+                    "label": "John & Richard"
+                }]
+            }]
+        },
+        "categories": [{
+            "category": [{
+                "start": "08/01/2014",
+                "end": "09/30/2014",
+                "label": "Q3"
+            }, {
+                "start": "10/01/2014",
+                "end": "12/31/2014",
+                "label": "Q4"
+            }, {
+                "start": "01/01/2015",
+                "end": "03/31/2015",
+                "label": "Q1"
+            }]
+        }, {
+            "category": [{
+                "start": "08/01/2014",
+                "end": "08/31/2014",
+                "label": "Aug '14"
+            }, {
+                "start": "09/01/2014",
+                "end": "09/30/2014",
+                "label": "Sep '14"
+            }, {
+                "start": "10/01/2014",
+                "end": "10/31/2014",
+                "label": "Oct '14"
+            }, {
+                "start": "11/01/2014",
+                "end": "11/30/2014",
+                "label": "Nov '14"
+            }, {
+                "start": "12/01/2014",
+                "end": "12/31/2014",
+                "label": "Dec '14"
+            }, {
+                "start": "01/01/2015",
+                "end": "01/31/2015",
+                "label": "Jan '15"
+            }, {
+                "start": "02/01/2015",
+                "end": "02/28/2015",
+                "label": "Feb '15"
+            }, {
+                "start": "03/01/2015",
+                "end": "03/31/2015",
+                "label": "Mar '15"
+            }]
+        }],
+        "processes": {
+            "fontsize": "12",
+            "isbold": "1",
+            "align": "left",
+            "headerText": "Steps",
+            "headerFontSize": "20",
+            "headerVAlign": "bottom",
+            "headerAlign": "left",
+            "process": [{
+                "label": "Identify Customers"
+            }, {
+                "label": "Survey 500 Customers"
+            }, {
+                "label": "Interpret Requirements"
+            }, {
+                "label": "Market Analysis"
+            }, {
+                "label": "Brainstorm concepts"
+            }, {
+                "label": "Define Ad Requirements"
+            }, {
+                "label": "Design & Develop"
+            }, {
+                "label": "Mock test"
+            }, {
+                "label": "Documentation"
+            }, {
+                "label": "Start Campaign"
+            }]
+        },
+        "tasks": {
+            "task": [{
+                "start": "08/04/2014",
+                "end": "08/10/2014"
+            }, {
+                "start": "08/08/2014",
+                "end": "08/19/2014"
+            }, {
+                "start": "08/19/2014",
+                "end": "09/02/2014"
+            }, {
+                "start": "08/24/2014",
+                "end": "09/02/2014"
+            }, {
+                "start": "09/02/2014",
+                "end": "09/21/2014"
+            }, {
+                "start": "09/21/2014",
+                "end": "10/06/2014"
+            }, {
+                "start": "10/06/2014",
+                "end": "01/21/2015",
+                "percentComplete": "20"
+            }, {
+                "start": "01/21/2015",
+                "end": "02/19/2015"
+            }, {
+                "start": "01/28/2015",
+                "end": "02/24/2015"
+            }, {
+                "start": "02/24/2015",
+                "end": "03/27/2015"
+            }]
+        }
+    }
+
+    fusionchart.setJSONData(jsonData);
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fwGanttChart quarterNames="1분기,2분기,3분기,4분기" autoCategory="true" style="height:500px;width:856px;margin:10px;" id="fusionchart" timeBase="date"
+    		monthNames="1월,2월,3월,4월,5월,6월,7월,8월,9월,10월,11월,12월" dateformat="yyyyMMdd" ref="" taskNode="" taskIdNode="" startDateNode="" endDateNode="" processNode="">
+    	</w2:fwGanttChart>
+    </body>
+</html>
