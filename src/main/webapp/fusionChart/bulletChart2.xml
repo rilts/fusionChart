@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="bulletChart2">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+<w2:dataList baseNode="list" id="dataList1" style="" saveRemovedData="true" repeatNode="map">
+					<w2:columnInfo>
+						<w2:column id="target" name="target" dataType="text"></w2:column>
+						<w2:column id="value" name="value" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="true">
+						<w2:row>
+							<target><![CDATA[80]]></target>
+							<value><![CDATA[40]]></value>
+						</w2:row>
+						<w2:row>
+							<target><![CDATA[90]]></target>
+							<value><![CDATA[60]]></value>
+						</w2:row>
+						<w2:row>
+							<target><![CDATA[100]]></target>
+							<value><![CDATA[70]]></value>
+						</w2:row>
+						<w2:row>
+							<target><![CDATA[110]]></target>
+							<value><![CDATA[80]]></value>
+						</w2:row>
+						<w2:row>
+							<target><![CDATA[115]]></target>
+							<value><![CDATA[90]]></value>
+						</w2:row>
+					</w2:data>
+				</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:gridView dataList="dataList1" fixedColumnWithHidden="true" id="gridView1" scrollByColumn="false" style="width:204px;height:136px;" useShiftKey="true">
+    		<w2:header id="header1" style="">
+    			<w2:row id="row2" style="">
+    				<w2:column blockSelect="false" id="column7" inputType="text" style="height:20px" value="target" width="70"></w2:column>
+    				<w2:column blockSelect="false" id="column3" inputType="text" style="height:20px" value="value" width="70"></w2:column>
+    			</w2:row>
+    		</w2:header>
+    		<w2:gBody id="gBody4" style="">
+    			<w2:row id="row5" style="">
+    				<w2:column blockSelect="false" id="target" inputType="text" style="height:20px" width="70"></w2:column>
+    				<w2:column blockSelect="false" id="value" inputType="text" style="height:20px" width="70"></w2:column>
+    			</w2:row>
+    		</w2:gBody>
+    	</w2:gridView><w2:fwBulletChart chartType="vbullet" style="height:448px;width: 300px;margin:10px;" id="fusionchart" ref="data:dataList1"
+    		targetNode="target" valueNode="value">
+    	</w2:fwBulletChart>
+    	
+    </body>
+</html>
