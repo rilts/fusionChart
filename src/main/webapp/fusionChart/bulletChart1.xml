@@ -63,7 +63,7 @@ scwin.onpageload = function() {
     			</w2:row>
     		</w2:gBody>
     	</w2:gridView><w2:fwBulletChart chartType="hbullet" style="width: 600px;height: 300px;margin:10px;" id="fusionchart" ref="data:dataList1" targetNode="target"
-    		valueNode="value">
+    		valueNode="value" version="3.15">
     	</w2:fwBulletChart>
     	
     </body>

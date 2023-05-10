@@ -55,6 +55,6 @@ scwin.setData = function() {
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:fwGaugeChart chartType="thermometer" style="margin:10px;width:361px;height:487px;" id="fusionchart" ref="data:dataList1" valueNode="value"></w2:fwGaugeChart>
+    	<w2:fwGaugeChart chartType="thermometer" style="margin:10px;width:361px;height:487px;" id="fusionchart" ref="data:dataList1" valueNode="value" version="3.15"></w2:fwGaugeChart>
     </body>
 </html>

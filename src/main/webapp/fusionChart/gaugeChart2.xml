@@ -55,6 +55,6 @@ scwin.setData = function() {
 ]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:fwGaugeChart chartType="bulb" style="margin:10px;width: 500px;height: 500px;" id="fusionchart" ref="data:dataList1" valueNode="value"></w2:fwGaugeChart>
+    	<w2:fwGaugeChart chartType="bulb" style="margin:10px;width: 500px;height: 500px;" id="fusionchart" ref="data:dataList1" valueNode="value" version="3.15"></w2:fwGaugeChart>
     </body>
 </html>

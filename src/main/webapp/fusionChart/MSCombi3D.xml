@@ -336,7 +336,7 @@ scwin.setJson = function() {
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<w2:fusionchart accessibility="false" drawType="javascript" runflashAt="IE6,IE7,IE8" seriesType="simple" chartType="MSCombi3D"
-    		style="position: relative ;margin:10px;height: 300px;" id="fusionchart">
+    		style="position: relative ;margin:10px;height: 300px;" id="fusionchart" version="3.15">
     	</w2:fusionchart>
     </body>
 </html>
