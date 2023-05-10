@@ -28,6 +28,7 @@
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
     scwin.setChartOpt();
+    // StackedBar3D타입 차트는 버전 설정을 꼭 해주어야 한다.(버그)
 };
 //차트 옵션 적용
 scwin.setChartOpt = function () {
@@ -75,6 +76,6 @@ scwin.setChartOpt = function () {
     		</w2:gBody>
     	</w2:gridView>
     	-->
-    	<w2:fusionchart chartType="MSColumn2D" drawType="javascript" id="fcMSC2d" ref="data:dataList2" labelNode="Month"  seriesColumns="[['Year1','Year2','Year3']]" style="height:400px;width:100%;"> </w2:fusionchart>
+    	<w2:fusionchart chartType="StackedBar3D" drawType="javascript" id="fcSB3d" ref="data:dataList2" labelNode="Month"  seriesColumns="[['Year1','Year2','Year3']]" style="height:400px;width:100%;" version="3.15"> </w2:fusionchart>
     </body>
 </html>

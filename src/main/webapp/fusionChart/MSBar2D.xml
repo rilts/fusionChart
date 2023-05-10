@@ -75,6 +75,6 @@ scwin.setChartOpt = function () {
     		</w2:gBody>
     	</w2:gridView>
     	-->
-    	<w2:fusionchart chartType="MSColumn2D" drawType="javascript" id="fcMSC2d" ref="data:dataList2" labelNode="Month"  seriesColumns="[['Year1','Year2','Year3']]" style="height:400px;width:100%;"> </w2:fusionchart>
+    	<w2:fusionchart chartType="MSBar2D" drawType="javascript" id="fcMSB2d" ref="data:dataList2" labelNode="Month"  seriesColumns="[['Year1','Year2','Year3']]" style="height:600px;width:100%;"> </w2:fusionchart>
     </body>
 </html>
