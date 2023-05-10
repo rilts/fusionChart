@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="2D Single Y Combination (MSCombi2D)">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo></w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+    var jsonData = {
+                    "chart": {
+                        "caption": "Harry's SuperMart",
+                        "subCaption": "Sales analysis of last year",
+                        "xAxisname": "Month",
+                        "yAxisName": "Amount (In USD)",
+                        "numberPrefix": "$",
+                        "theme": "fusion"
+                    },
+                    "categories": [
+                        {
+                            "category": [
+                                {
+                                    "label": "Jan"
+                                },
+                                {
+                                    "label": "Feb"
+                                },
+                                {
+                                    "label": "Mar"
+                                },
+                                {
+                                    "label": "Apr"
+                                },
+                                {
+                                    "label": "May"
+                                },
+                                {
+                                    "label": "Jun"
+                                },
+                                {
+                                    "label": "Jul"
+                                },
+                                {
+                                    "label": "Aug"
+                                },
+                                {
+                                    "label": "Sep"
+                                },
+                                {
+                                    "label": "Oct"
+                                },
+                                {
+                                    "label": "Nov"
+                                },
+                                {
+                                    "label": "Dec"
+                                }
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "seriesName": "Actual Revenue",
+                            "showValues": "1",
+                            "data": [
+                                {
+                                    "value": "16000"
+                                },
+                                {
+                                    "value": "20000"
+                                },
+                                {
+                                    "value": "18000"
+                                },
+                                {
+                                    "value": "19000"
+                                },
+                                {
+                                    "value": "15000"
+                                },
+                                {
+                                    "value": "21000"
+                                },
+                                {
+                                    "value": "16000"
+                                },
+                                {
+                                    "value": "20000"
+                                },
+                                {
+                                    "value": "17000"
+                                },
+                                {
+                                    "value": "25000"
+                                },
+                                {
+                                    "value": "19000"
+                                },
+                                {
+                                    "value": "23000"
+                                }
+                            ]
+                        },
+                        {
+                            "seriesName": "Projected Revenue",
+                            "renderAs": "line",
+                            "data": [
+                                {
+                                    "value": "15000"
+                                },
+                                {
+                                    "value": "16000"
+                                },
+                                {
+                                    "value": "17000"
+                                },
+                                {
+                                    "value": "18000"
+                                },
+                                {
+                                    "value": "19000"
+                                },
+                                {
+                                    "value": "19000"
+                                },
+                                {
+                                    "value": "19000"
+                                },
+                                {
+                                    "value": "19000"
+                                },
+                                {
+                                    "value": "20000"
+                                },
+                                {
+                                    "value": "21000"
+                                },
+                                {
+                                    "value": "22000"
+                                },
+                                {
+                                    "value": "23000"
+                                }
+                            ]
+                        },
+                        {
+                            "seriesName": "Profit",
+                            "renderAs": "area",
+                            "data": [
+                                {
+                                    "value": "4000"
+                                },
+                                {
+                                    "value": "5000"
+                                },
+                                {
+                                    "value": "3000"
+                                },
+                                {
+                                    "value": "4000"
+                                },
+                                {
+                                    "value": "1000"
+                                },
+                                {
+                                    "value": "7000"
+                                },
+                                {
+                                    "value": "1000"
+                                },
+                                {
+                                    "value": "4000"
+                                },
+                                {
+                                    "value": "1000"
+                                },
+                                {
+                                    "value": "8000"
+                                },
+                                {
+                                    "value": "2000"
+                                },
+                                {
+                                    "value": "7000"
+                                }
+                            ]
+                        }
+                    ]
+                }
+    
+    fusionchart.setJSONData(jsonData);
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fusionchart accessibility="false" drawType="javascript" runflashAt="IE6,IE7,IE8" seriesType="simple" chartType="MSCombi2D"
+    		style="position: relative ;margin:10px;height: 300px;" id="fusionchart" version="3.15">
+    	</w2:fusionchart>
+    </body>
+</html>

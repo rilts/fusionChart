@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="gaugeCahrt1">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="label" name="name1" dataType="text"></w2:column>
+            			<w2:column id="value" name="name2" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<value><![CDATA[20]]></value>
+            				<label><![CDATA[a1]]></label>
+            			</w2:row>
+            			<w2:row>
+            				<value><![CDATA[40]]></value>
+            				<label><![CDATA[a2]]></label>
+            			</w2:row>
+            			<w2:row>
+            				<value><![CDATA[60]]></value>
+            				<label><![CDATA[a3]]></label>
+            			</w2:row>
+            			<w2:row>
+            				<value><![CDATA[90]]></value>
+            				<label><![CDATA[a4]]></label>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setData();
+};
+
+scwin.setData = function() {
+    var nRow = 1;
+
+    $p.setInterval(function() {
+		            dataList1.setRowPosition(nRow);
+                    if(nRow == dataList1.getRowCount() - 1) nRow = 0;
+                    else nRow++;
+	                }, { delay : 5000, key : "timeloop" }
+                  );
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fwGaugeChart chartType="angulargauge" style="margin:10px;width:674px;height:392px;" id="fusionchart" ref="data:dataList1" valueNode="value" version="3.15"></w2:fwGaugeChart>
+    </body>
+</html>

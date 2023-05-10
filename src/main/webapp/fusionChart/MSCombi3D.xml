@@ -22,8 +22,6 @@ scwin.onpageload = function() {
 };
 
 scwin.setJson = function() {
-{
-
     var jsonData = {
                     "chart": {
                         "caption": "Revenue, Profits & Number of employees",
@@ -188,16 +186,16 @@ scwin.setJson = function() {
                             "showvalues": "0",
                             "data": [
                                 {
-                                    "value": "4000"
+                                    "value": "34000"
                                 },
                                 {
-                                    "value": "5000"
+                                    "value": "25000"
                                 },
                                 {
-                                    "value": "3000"
+                                    "value": "33000"
                                 },
                                 {
-                                    "value": "4000"
+                                    "value": "14000"
                                 },
                                 {
                                     "value": "1000"
@@ -263,70 +261,70 @@ scwin.setJson = function() {
                             "plottooltext": "$value employees",
                             "data": [
                                 {
-                                    "value": "31"
+                                    "value": "3100"
                                 },
                                 {
-                                    "value": "25"
+                                    "value": "2500"
                                 },
                                 {
-                                    "value": "35"
+                                    "value": "3500"
                                 },
                                 {
-                                    "value": "29"
+                                    "value": "2900"
                                 },
                                 {
-                                    "value": "25"
+                                    "value": "2500"
                                 },
                                 {
-                                    "value": "23"
+                                    "value": "2300"
                                 },
                                 {
-                                    "value": "26"
+                                    "value": "2600"
                                 },
                                 {
-                                    "value": "25"
+                                    "value": "2500"
                                 },
                                 {
-                                    "value": "25"
+                                    "value": "2500"
                                 },
                                 {
-                                    "value": "35"
+                                    "value": "3500"
                                 },
                                 {
-                                    "value": "20"
+                                    "value": "2000"
                                 },
                                 {
-                                    "value": "30"
+                                    "value": "3000"
                                 },
                                 {
-                                    "value": "46"
+                                    "value": "4600"
                                 },
                                 {
-                                    "value": "34"
+                                    "value": "3400"
                                 },
                                 {
-                                    "value": "26"
+                                    "value": "2600"
                                 },
                                 {
-                                    "value": "33"
+                                    "value": "3300"
                                 },
                                 {
-                                    "value": "46"
+                                    "value": "4600"
                                 },
                                 {
-                                    "value": "25"
+                                    "value": "2500"
                                 },
                                 {
-                                    "value": "35"
+                                    "value": "3500"
                                 },
                                 {
-                                    "value": "28"
+                                    "value": "2800"
                                 },
                                 {
-                                    "value": "20"
+                                    "value": "2000"
                                 },
                                 {
-                                    "value": "43"
+                                    "value": "4300"
                                 }
                             ]
                         }
@@ -334,13 +332,11 @@ scwin.setJson = function() {
                 };
     
     fusionchart.setJSONData(jsonData);
-};
-
-}]]></script>
+};]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<w2:fusionchart accessibility="false" drawType="javascript" runflashAt="IE6,IE7,IE8" seriesType="simple" chartType="MSCombi3D"
-    		style="position: relative ;margin:10px;height: 300px;" id="fusionchart">
+    		style="position: relative ;margin:10px;height: 300px;" id="fusionchart" version="3.15">
     	</w2:fusionchart>
     </body>
 </html>
