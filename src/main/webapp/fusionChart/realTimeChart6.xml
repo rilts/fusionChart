@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="realTimeChart6">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="value" name="name2" dataType="text"></w2:column>
+            			<w2:column id="label" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				
+            				<value><![CDATA[20]]></value>
+            				<label><![CDATA[A]]></label>
+            				
+            			</w2:row>
+            			<w2:row>
+            				
+            				<value><![CDATA[15]]></value>
+            				<label><![CDATA[B]]></label>
+            			</w2:row>
+            			<w2:row>
+            				
+            				<value><![CDATA[5]]></value>
+            				<label><![CDATA[C]]></label>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[scwin.onpageload = function() {
+    scwin.setData();
+};
+
+scwin.setData = function() {
+    var aRow = 3, tmpData;
+    
+    $p.setInterval(function() {
+                    tmpData = [{"label":"A","value":(Math.random() * 3)}
+                               , {"label":"B","value":(Math.random() * 4)}
+                               , {"label":"C","value":(Math.random() * 5)}];
+
+                    dataList1.insertJSON(aRow, tmpData );
+		            aRow = aRow + 3;
+	                }, { delay : 3000, key : "timeloop" }
+                  );
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fwRealtimeChart timeformat="HH:mm:ss" chartType="realtimelinedy" style="height: 300px;margin:10px;" id="fusionchart" version="3.15" ref="data:dataList1" seriesArray="label" seriesNode="label" valueNode="value" refreshInterval="3"></w2:fwRealtimeChart>
+    </body>
+</html>
