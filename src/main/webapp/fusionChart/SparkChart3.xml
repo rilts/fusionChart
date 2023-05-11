@@ -15,6 +15,7 @@
         				<w2:column id="process" name="process" dataType="text"></w2:column>
         				<w2:column id="sex" name="sex" dataType="text"></w2:column>
         				<w2:column id="count" name="count" dataType="number"></w2:column>
+        				<w2:column id="winloss" name="WinLoss" dataType="text"></w2:column>
         			</w2:columnInfo>
         		</w2:dataList>
         	</w2:dataCollection>
@@ -26,20 +27,12 @@
         </xf:model>
         <w2:layoutInfo/>
         <w2:publicInfo method=""/>
-        <script lazy="false" type="text/javascript"><![CDATA[
-/* 
-  FunnelChart 설정 방법
-
-  - seriesType : simple
-    seriesNode
-    labelNode
-    valueNode
-
-  - seriesType : advanced
-    seriesColumn
-    labelNode
-    valueNode
- 
+        <script lazy="false" type="text/javascript"><![CDATA[/* 
+   sparkwinloss의 데이터는 
+   W (Win)
+   L (Loss)
+   D (Draw)
+   세 가지 글자 중 하나여야 함
  */
 scwin.onpageload = function() {
     scwin.setChartOpt();
@@ -47,14 +40,14 @@ scwin.onpageload = function() {
 //차트 옵션 적용
 scwin.setChartOpt = function () {
     var data = [
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"가입","sex":"남성","count":"19559"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"노출","sex":"남성","count":"13105"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"남성","count":"3932"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"남성","count":"393"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"가입","sex":"여성","count":"23471"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"노출","sex":"여성","count":"15256"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"여성","count":"4882"},
-        {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"여성","count":"732"}];
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"가입","sex":"남성","count":"19559", "winloss":"W"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"노출","sex":"남성","count":"13105", "winloss":"W"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"남성","count":"3932", "winloss":"L"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"남성","count":"393", "winloss":"D"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"가입","sex":"여성","count":"23471", "winloss":"D"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"노출","sex":"여성","count":"15256", "winloss":"W"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"여성","count":"4882", "winloss":"L"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"여성","count":"732", "winloss":"L"}];
     dataList2.setJSON(data);
 };
 ]]></script>
@@ -98,6 +91,6 @@ scwin.setChartOpt = function () {
     		</w2:gBody>
     		</w2:gridView>
     	-->
-    	<w2:fwSparkChart accessibility="false" seriesType="simple" chartType="sparkline" style="width: 500px;height: 300px;" id="" ref="data:dataList2" valueNode="count" labelNode="process" seriesNode="process"></w2:fwSparkChart>
+    	<w2:fwSparkChart accessibility="false" seriesType="simple" chartType="sparkwinloss" style="width: 500px;height: 300px;" id="fcSPC3" ref="data:dataList2" valueNode="winloss" labelNode="process" seriesNode="process"></w2:fwSparkChart>
     </body>
 </html>

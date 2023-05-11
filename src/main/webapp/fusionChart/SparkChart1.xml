@@ -26,22 +26,7 @@
         </xf:model>
         <w2:layoutInfo/>
         <w2:publicInfo method=""/>
-        <script lazy="false" type="text/javascript"><![CDATA[
-/* 
-  PyramidChart 설정 방법
-
-  - seriesType : simple
-    seriesNode
-    labelNode
-    valueNode
-
-  - seriesType : advanced
-    seriesColumn
-    labelNode
-    valueNode
- 
- */
-scwin.onpageload = function() {
+        <script lazy="false" type="text/javascript"><![CDATA[scwin.onpageload = function() {
     scwin.setChartOpt();
 };
 //차트 옵션 적용
@@ -56,6 +41,16 @@ scwin.setChartOpt = function () {
         {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"여성","count":"4882"},
         {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"여성","count":"732"}];
     dataList2.setJSON(data);
+    var options = {
+      "caption": "Stock Price",
+      "anchorRadius": "4",
+      "openHoverColor": "#9bd6fd",
+      "closeHoverColor": "#9bd6fd",
+      "highHoverColor": "#90ff90",
+      "lowHoverColor": "#fd6c6c"
+    };
+    fcSPC1.setChartAttribute(options);
+    fcSPC1.draw();
 };
 ]]></script>
     </head>
@@ -98,6 +93,6 @@ scwin.setChartOpt = function () {
     		</w2:gBody>
     		</w2:gridView>
     	-->
-    	<w2:fwPyramidChart accessibility="false" seriesType="simple" style="width: 500px;height: 300px;" id="" ref="data:dataList2" labelNode="process" valueNode="count" seriesNode="process"></w2:fwPyramidChart>
+    	<w2:fwSparkChart accessibility="false" seriesType="simple" chartType="sparkline" style="width: 500px;height: 300px;" id="fcSPC1" ref="data:dataList2" valueNode="count" labelNode="process" seriesNode="process"></w2:fwSparkChart>
     </body>
 </html>
