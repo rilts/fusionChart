@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+        	<w2:dataCollection baseNode="map">
+        		<w2:dataList id="dataList2" baseNode="vector2" repeatNode="item" valueNode="">
+        			<w2:columnInfo>
+        				<w2:column id="date" name="date" dataType="text"></w2:column>
+        				<w2:column id="promotionId" name="promotionId" dataType="text"></w2:column>
+        				<w2:column id="process" name="process" dataType="text"></w2:column>
+        				<w2:column id="sex" name="sex" dataType="text"></w2:column>
+        				<w2:column id="count" name="count" dataType="number"></w2:column>
+        			</w2:columnInfo>
+        		</w2:dataList>
+        	</w2:dataCollection>
+        	<w2:workflowCollection />
+        	<xf:submission id="sbm_chartData1" ref="" target="data:json,dlt_chartData1" action="/data/titanic.json" method="post" mediatype="application/json" encoding="UTF-8"
+        		instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="scwin.sbm_chartData1_submitdone"
+        		ev:submiterror="" abortTrigger="">
+        	</xf:submission>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[scwin.onpageload = function() {
+    scwin.setChartOpt();
+};
+//차트 옵션 적용
+scwin.setChartOpt = function () {
+    var data = [
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"가입","sex":"남성","count":"19559"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"노출","sex":"남성","count":"13105"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"남성","count":"3932"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"남성","count":"393"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"가입","sex":"여성","count":"23471"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"노출","sex":"여성","count":"15256"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"클릭","sex":"여성","count":"4882"},
+        {"date":"2020.8.31", "promotionId":"Pro_01","process":"구매","sex":"여성","count":"732"}];
+    dataList2.setJSON(data);
+    var options = {
+      "caption": "성별 가입 구매 추세",
+      "anchorRadius": "4",
+      "openColor": "#9bd6fd",
+      "closeColor": "#9bd6fd",
+      "highColor": "#90ff90",
+      "lowColor": "#fd6c6c"
+    };
+    fcSPC2.setChartAttribute(options);
+    fcSPC2.draw();
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<!--
+    		<w2:gridView checkAllType="false" scrollByColumn="false" defaultCellHeight="20" scrollByColumnAdaptive="false" id=""
+    		style="height: 500px;" dataList="data:dlt_chartData1">
+    		<w2:caption style="" id="caption1" value="this is a grid caption."></w2:caption>
+    		<w2:header style="" id="header1">
+    		<w2:row style="" id="row1">
+    		<w2:column width="70" inputType="text" style="" id="column12" value="승객번호" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column11" value="생존여부" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column10" value="승객등급" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column9" value="이름" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column8" value="성별" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column7" value="나이" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column6" value="형제/배우자" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column5" value="부모/자녀" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column4" value="표번호" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column3" value="요금" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column2" value="객실" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="column1" value="승선지" displayMode="label"></w2:column>
+    		</w2:row>
+    		</w2:header>
+    		<w2:gBody style="" id="gBody1">
+    		<w2:row style="" id="row2">
+    		<w2:column width="70" inputType="text" style="" id="PassengerId" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Survived" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Pclass" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Name" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Sex" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Age" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="SibSp" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Parch" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Ticket" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Fare" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Cabin" value="" displayMode="label"></w2:column>
+    		<w2:column width="70" inputType="text" style="" id="Embarked" value="" displayMode="label"></w2:column>
+    		</w2:row>
+    		</w2:gBody>
+    		</w2:gridView>
+    	-->
+    	<w2:fwSparkChart accessibility="false" seriesType="simple" chartType="sparkcolumn" style="width: 500px;height: 300px;" id="fcSPC2" ref="data:dataList2" valueNode="count" labelNode="process" seriesNode="process"></w2:fwSparkChart>
+    </body>
+</html>
