@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate />
+		<w2:MSA />
+		<xf:model>
+			<w2:dataCollection>
+
+				<w2:dataList id="dlt_chartData" baseNode="list" style="" repeatNode="data">
+					<w2:columnInfo>
+						<w2:column id="month" name="매출월" dataType="text"></w2:column>
+						<w2:column id="data1" name="데이터1" dataType="number"></w2:column>
+						<w2:column id="data2" name="데이터2" dataType="number"></w2:column>
+						<w2:column id="data3" name="데이터3" dataType="number"></w2:column>
+						<w2:column id="data4" name="데이터4" dataType="number"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+
+			</w2:dataCollection>
+		</xf:model>
+		<script type="javascript" lazy="false"><![CDATA[
+
+scwin.onpageload = function() {
+	scwin.setChartData();
+	scwin.setChartOption();
+};
+
+
+/**
+ * 차트 데이터 셋팅 
+ */
+scwin.setChartData = function(){
+	var jsonData = [
+		{"month":"1월",		"data1":20000,	"data2":10000}
+		,{"month":"2월",	"data1":15000,	"data2":20000}
+		,{"month":"3월",	"data1":12000,	"data2":30000}
+		,{"month":"4월",	"data1":27000,	"data2":40000}
+		,{"month":"5월",	"data1":11000,	"data2":50000}
+		,{"month":"6월",	"data1":19000,	"data2":60000}
+		,{"month":"7월",	"data1":23000,	"data2":50000}
+		,{"month":"8월",	"data1":24000,	"data2":40000}
+		,{"month":"9월",	"data1":17000,	"data2":30000}
+		,{"month":"10월",	"data1":20000,	"data2":20000}
+		,{"month":"11월",	"data1":11000,	"data2":10000}
+		,{"month":"12월",	"data1":22000,	"data2":20000}
+	];
+	dlt_chartData.setJSON(jsonData);
+};
+
+
+/**
+ * 차트 옵션 적용 & 그리기 
+ */
+scwin.setChartOption = function() {
+	//차트 Attribute 값 셋팅
+	var attributeOptions = {
+		caption	: "매출현황"		//주 타이틀 명
+		,subCaption : "Scatter"		//부 타이틀 명
+		,xAxisName : "매출월"		//x축 명칭  
+		,yAxisName : "금액(만원)"		//y축 명칭	
+	};
+	fusionchart1.setChartAttribute(attributeOptions);
+
+	//별도의 TrendLine 추가 (별도 라인)   
+	// var trendLineOptions = {
+	// 	startValue : "15000"
+	// 	,color : "FF0030"
+	// 	,displayValue : "손익분기점"
+	// };
+	// fusionchart1.addTrendLine(trendLineOptions);
+
+	//차트 dataList binding (차트에 직접 binding 하지 않을 경우)   
+	var ref = "data:" + "dlt_chartData";		//연결 dataList 
+	var labelNode = "month";
+	//var seriesColumns = "[['data1','data2']]"; 		//멀티 series 일 경우 array 형태로 => [['col1','col2','col3']]
+	var seriesColumns = "[['data1','data2']]";
+	fusionchart1.setChartColumnRef(ref, labelNode, seriesColumns); 
+
+	//차트 그리기 
+	fusionchart1.draw(); 
+};
+
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+		<w2:fusionchart id="fusionchart1" chartType="Scatter" ref=""
+			style="position: relative ;margin:10px;height: 300px;" drawType="javascript" version="3.15">
+		</w2:fusionchart>
+	</body>
+</html>
