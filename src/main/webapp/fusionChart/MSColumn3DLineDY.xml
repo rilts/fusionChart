@@ -115,7 +115,7 @@ scwin.setJson = function() {
 	};
     
 	fusionchart.setChartAttribute(attributeOptions); 
-
+    
     fusionchart.draw();      
 };]]></script>
     </head>
