@@ -23,17 +23,6 @@ scwin.onpageload = function() {
 
 scwin.setJson = function() {
     var jsonData = {
-                    "chart": {
-                        "caption": "Product-wise Quarterly Revenue vs. Profit %",
-                        "subCaption": "Harry's SuperMart - Last Year",
-                        "xAxisname": "Quarter",
-                        "pYAxisName": "Sales",
-                        "sYAxisName": "Profit %",
-                        "numberPrefix": "$",
-                        "sNumberSuffix": "%",
-                        "sYAxisMaxValue": "25",
-                        "theme": "fusion"
-                    },
                     "categories": [
                         {
                             "category": [
@@ -111,6 +100,22 @@ scwin.setJson = function() {
                 }
     
     fusionchart.setJSONData(jsonData);
+
+	var attributeOptions = {
+		caption: "Product-wise Quarterly Revenue vs. Profit %",
+        subCaption: "Harry's SuperMart - Last Year",
+        xAxisname: "Quarter",
+        pYAxisName: "Sales",
+        sYAxisName: "Profit %",
+        numberPrefix: "$",
+        sNumberSuffix: "%",
+        sYAxisMaxValue: "25",
+        theme: "fusion"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions); 
+
+    fusionchart.draw();      
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">

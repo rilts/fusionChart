@@ -23,17 +23,6 @@ scwin.onpageload = function() {
 
 scwin.setJson = function() {
     var jsonData = {
-                    "chart": {
-                        "caption": "Revenue, Profits & Number of employees",
-                        "drawcrossline": "1",
-                        "yaxisname": "Revenue / Profit (in $)",
-                        "syaxisname": "Number of employees",
-                        "showvalues": "0",
-                        "showanchors": "0",
-                        "numberprefix": "$",
-                        "plothighlighteffect": "fadeout",
-                        "theme": "fusion"
-                    },
                     "categories": [
                         {
                             "category": [
@@ -332,6 +321,22 @@ scwin.setJson = function() {
                 };
     
     fusionchart.setJSONData(jsonData);
+
+	var attributeOptions = {
+		caption: "Revenue, Profits & Number of employees",
+        drawcrossline: "1",
+        yaxisname: "Revenue / Profit (in $)",
+        syaxisname: "Number of employees",
+        showvalues: "0",
+        showanchors: "0",
+        numberprefix: "$",
+        plothighlighteffect: "fadeout",
+        theme: "fusion"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions); 
+
+    fusionchart.draw();     
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">

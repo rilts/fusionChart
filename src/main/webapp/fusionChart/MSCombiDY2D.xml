@@ -23,19 +23,6 @@ scwin.onpageload = function() {
 
 scwin.setJson = function() {
     var jsonData = {
-                    "chart": {
-                        "caption": "Global Robotic Process Automation Market",
-                        "subcaption": "2016 - 2021",
-                        "yaxisname": "Market Size (in $ Millions)",
-                        "syaxisname": "YoY growth in %",
-                        "formatnumberscale": "0",
-                        "numberprefix": "$",
-                        "numbersuffix": "M",
-                        "snumbersuffix": "%",
-                        "showvalues": "0",
-                        "plottooltext": "Market size for $seriesName in $label is <b>$dataValue</b>",
-                        "theme": "fusion"
-                    },
                     "categories": [
                         {
                             "category": [
@@ -137,6 +124,24 @@ scwin.setJson = function() {
                 }
     
     fusionchart.setJSONData(jsonData);
+
+	var attributeOptions = {
+		caption: "Global Robotic Process Automation Market",
+        subcaption: "2016 - 2021",
+        yaxisname: "Market Size (in $ Millions)",
+        syaxisname: "YoY growth in %",
+        formatnumberscale: "0",
+        numberprefix: "$",
+        numbersuffix: "M",
+        snumbersuffix: "%",
+        showvalues: "0",
+        plottooltext: "Market size for $seriesName in $label is <b>$dataValue</b>",
+        theme: "fusion"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions); 
+
+    fusionchart.draw();      
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">

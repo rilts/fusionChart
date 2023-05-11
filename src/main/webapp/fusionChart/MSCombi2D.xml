@@ -23,14 +23,6 @@ scwin.onpageload = function() {
 
 scwin.setJson = function() {
     var jsonData = {
-                    "chart": {
-                        "caption": "Harry's SuperMart",
-                        "subCaption": "Sales analysis of last year",
-                        "xAxisname": "Month",
-                        "yAxisName": "Amount (In USD)",
-                        "numberPrefix": "$",
-                        "theme": "fusion"
-                    },
                     "categories": [
                         {
                             "category": [
@@ -204,6 +196,19 @@ scwin.setJson = function() {
                 }
     
     fusionchart.setJSONData(jsonData);
+
+	var attributeOptions = {
+		caption: "Harry's SuperMart",
+        subCaption: "Sales analysis of last year",
+        xAxisname: "Month",
+        yAxisName: "Amount (In USD)",
+        numberPrefix: "$",
+        theme: "fusion"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions); 
+
+    fusionchart.draw();      
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">

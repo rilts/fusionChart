@@ -23,14 +23,6 @@ scwin.onpageload = function() {
 
 scwin.setJson = function() {
     var jsonData = {
-                    "chart": {
-                        "caption": "Cost Analysis",
-                        "subcaption": "Last Year",
-                        "numberprefix": "$",
-                        "xaxisname": "Quarter",
-                        "yaxisname": "Cost",
-                        "theme": "fusion"
-                    },
                     "categories": [
                         {
                             "category": [
@@ -107,6 +99,19 @@ scwin.setJson = function() {
                 }
     
     fusionchart.setJSONData(jsonData);
+
+	var attributeOptions = {
+		caption: "Cost Analysis",
+        subcaption: "Last Year",
+        numberprefix: "$",
+        xaxisname: "Quarter",
+        yaxisname: "Cost",
+        theme: "fusion"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions); 
+
+    fusionchart.draw();      
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">

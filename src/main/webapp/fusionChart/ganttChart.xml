@@ -94,13 +94,6 @@ scwin.onpageload = function() {
 
 scwin.setJson = function() {
     var jsonData = {
-                    "chart": {
-                        "dateformat": "mm/dd/yyyy",
-                        "caption": "Social Media Optimization",
-                        "slackFillColor": "#CC0000",
-                        "theme": "fint",
-                        "canvasBorderAlpha": "40"
-                    },
                     "datatable": {
                         "headervalign": "bottom",
                         "datacolumn": [{
@@ -249,6 +242,18 @@ scwin.setJson = function() {
                 }
 
     fusionchart.setJSONData(jsonData);
+
+	var attributeOptions = {
+		dateformat: "mm/dd/yyyy",
+        caption: "Social Media Optimization",
+        slackFillColor: "#CC0000",
+        theme: "fint",
+        canvasBorderAlpha: "40"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions); 
+
+    fusionchart.draw();      
 };
 ]]></script>
     </head>
