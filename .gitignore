@@ -1,5 +1,8 @@
 /target/
 **/_wpack_/**
+*/**/_wpack_/**
+src/main/webapp/_wpack_/
+
 .classpath
 .settings
 .project
