@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>default</w2:type>
+		<w2:buildDate/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<!--w2:dataList baseNode="list" repeatNode="map" id="dlt_sample" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="chk" name="선택" dataType="text" ignoreStatus="true"></w2:column>
+						<w2:column id="SAMPLE_CD" name="샘플코드" dataType="text"></w2:column>
+						<w2:column id="SAMPLE_NM" name="샘플명" dataType="text"></w2:column>
+						<w2:column id="PARENT_SAMPLE_CD" name="부모샘플코드" dataType="text"></w2:column>
+						<w2:column id="SAMPLE_LEVEL" name="샘플레벨" dataType="number"></w2:column>
+						<w2:column id="SORT_ORDER" name="정렬순번" dataType="number"></w2:column>
+						<w2:column id="IS_USE" name="사용여부" dataType="text"></w2:column>
+						<w2:column id="FILE_PATH" name="샘플소스경로" dataType="text"></w2:column>
+						<w2:column id="CONTENT" name="샘플설명" dataType="text"></w2:column>
+						<w2:column id="KEYWORD" name="검색키워드" dataType="text"></w2:column>
+						<w2:column id="NOTE" name="비고" dataType="text"></w2:column>
+						<w2:column id="open" name="open" dataType="text" ignoreStatus="true"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="KEYWORD" name="검색키워드" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap-->
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+			<!--xf:submission id="sbm_saveSample" ref='data:json,["dlt_sample","dma_search"]' target="data:json,dlt_sample" action="/sample/updateSample"
+				method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous"
+				processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+			</xf:submission-->
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+		
+		<script type="text/javascript" lazy="false" src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+	scwin.myChart1;
+	scwin.myChart2;
+	scwin.myChart3;
+	scwin.myChart4;
+	
+	scwin.onpageload = function () {
+		var myChart1_id = myChart1.getID();
+		var myChart2_id = myChart2.getID();
+		var myChart3_id = myChart3.getID();
+		var myChart4_id = myChart4.getID();
+
+		scwin.myChart1 = echarts.init(document.getElementById( myChart1_id ));
+		scwin.myChart2 = echarts.init(document.getElementById( myChart2_id ));
+		scwin.myChart3 = echarts.init(document.getElementById( myChart3_id ));
+		scwin.myChart4 = echarts.init(document.getElementById( myChart4_id ));
+		
+		// Specify the configuration items and data for the chart
+		var option1 = {
+			title: {
+				text: 'ECharts Getting Started Example'
+			},
+			tooltip: {},
+			legend: {
+				data: ['sales']
+			},
+			xAxis: {
+				data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
+			},
+			yAxis: {},
+			series: [
+				{ name: 'sales', type: 'bar', data: [5, 20, 36, 10, 10, 20]  }
+			]
+		};
+		var option2 = {
+			legend: {
+				// Try 'horizontal'
+				orient: 'vertical',
+				right: 10,
+				top: 'center'
+			},
+			dataset: {
+				source: [
+					['product', '2015', '2016', '2017'],
+					['Matcha Latte', 43.3, 85.8, 93.7],
+					['Milk Tea', 83.1, 73.4, 55.1],
+					['Cheese Cocoa', 86.4, 65.2, 82.5],
+					['Walnut Brownie', 72.4, 53.9, 39.1]
+				]
+			},
+			xAxis: { type: 'category' },
+			yAxis: {},
+			series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
+		};
+		var option3 = {
+			legend: {
+				orient: 'vertical',
+				x: 'left',
+				data: ['A', 'B', 'C', 'D', 'E']
+			},
+			series: [
+				{
+					type: 'pie',
+					radius: ['50%', '70%'],
+					avoidLabelOverlap: false,
+					label: {
+						show: false,
+						position: 'center'
+					},
+					labelLine: {
+						show: false
+					},
+					emphasis: {
+						label: {
+						show: true,
+						fontSize: '30',
+						fontWeight: 'bold'
+						}
+					},
+					data: [
+						{ value: 335, name: 'A' },
+						{ value: 310, name: 'B' },
+						{ value: 234, name: 'C' },
+						{ value: 135, name: 'D' },
+						{ value: 1548, name: 'E' }
+					]
+				}
+			]
+		};
+		const colors = ['#5470C6', '#91CC75', '#EE6666'];
+		var option4 = {
+			color: colors,
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross'
+				}
+			},
+			grid: {
+				right: '20%'
+			},
+			toolbox: {
+				feature: {
+					dataView: { show: true, readOnly: false },
+					restore: { show: true },
+					saveAsImage: { show: true }
+				}
+			},
+			legend: {
+				data: ['Evaporation', 'Precipitation', 'Temperature']
+			},
+			xAxis: [
+				{
+					type: 'category',
+					axisTick: {
+						alignWithLabel: true
+					},
+					// prettier-ignore
+					data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+				}
+			],
+			yAxis: [
+				{
+					type: 'value',
+					name: 'Evaporation',
+					position: 'right',
+					alignTicks: true,
+					axisLine: {
+						show: true,
+						lineStyle: {
+							color: colors[0]
+						}
+					},
+					axisLabel: {
+						formatter: '{value} ml'
+					}
+				},
+				{
+					type: 'value',
+					name: 'Precipitation',
+					position: 'right',
+					alignTicks: true,
+					offset: 80,
+					axisLine: {
+						show: true,
+						lineStyle: {
+							color: colors[1]
+						}
+					},
+					axisLabel: {
+						formatter: '{value} ml'
+					}
+				},
+				{
+					type: 'value',
+					name: '온도',
+					position: 'left',
+					alignTicks: true,
+					axisLine: {
+						show: true,
+						lineStyle: {
+							color: colors[2]
+						}
+					},
+					axisLabel: {
+						formatter: '{value} °C'
+					}
+				}
+			],
+			series: [
+				{
+					name: 'Evaporation',
+					type: 'bar',
+					data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+				},
+				{
+					name: 'Precipitation',
+					type: 'bar',
+					yAxisIndex: 1,
+					data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+				},
+				{
+					name: 'Temperature',
+					type: 'line',
+					yAxisIndex: 2,
+					data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+				}
+			]
+		};
+		// Display the chart using the configuration items and data just specified.
+		scwin.myChart1.setOption(option1);
+		scwin.myChart2.setOption(option2);
+		scwin.myChart3.setOption(option3);
+		scwin.myChart4.setOption(option4);
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+		<xf:group class="sub_contents flex_gvw" id="grp_content" style="" ev:onclick="scwin.grp_content_onclick">
+			<w2:wframe id="" src="../../cm/xml/contentHeader.xml" style=""></w2:wframe>
+			<xf:group adaptiveThreshold="" class="gvwbox wq_flx" id="" style="">
+				<!--div id="main" style="width: 600px;height:400px;"></div-->
+				<xf:group id="myChart1" style="width:600px; height:400px;" class=""></xf:group>
+				<xf:group id="myChart2" style="width:600px; height:400px;" class=""></xf:group>
+				<xf:group id="myChart3" style="width:600px; height:400px;" class=""></xf:group>
+				<xf:group id="myChart4" style="width:600px; height:600px;" class=""></xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>
