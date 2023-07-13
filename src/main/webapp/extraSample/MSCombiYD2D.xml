@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_vertical_guides="11" meta_horizontal_guides="">
+    	<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+        	<xf:instance>
+        		<data xmlns="" />
+        	</xf:instance>
+        	<w2:dataCollection baseNode="map">
+        		<w2:dataList baseNode="list" ev:oncelldatachange="scwin.dlReqList_oncelldatachange" id="dataList1" repeatNode="map"
+        			saveRemovedData="true" style="">
+        			<w2:columnInfo>
+        				<w2:column dataType="text" id="month" name="month"></w2:column>
+        				<w2:column dataType="text" id="quarter1" name=" test1"></w2:column>
+        				<w2:column dataType="text" id="quarter2" name="test2"></w2:column>
+        				<w2:column dataType="text" id="quarter3" name="test3"></w2:column>
+        				<w2:column id="col5" name="name5" dataType="text"></w2:column>
+        				<w2:column dataType="text" id="quarter4" name="test4"></w2:column>
+        				<w2:column dataType="text" id="quarter5" name="test5"></w2:column>
+        				<w2:column dataType="text" id="quarter6" name="test6"></w2:column>
+        			</w2:columnInfo>
+        			<w2:data use="true">
+        				<w2:row>
+        					<month><![CDATA[1월]]></month>
+        					<quarter1><![CDATA[0]]></quarter1>
+        					<quarter2><![CDATA[10000]]></quarter2>
+        					<quarter3><![CDATA[10800]]></quarter3>
+        					<quarter4><![CDATA[10800]]></quarter4>
+        					<quarter5><![CDATA[10800]]></quarter5>
+        					<quarter6><![CDATA[10800]]></quarter6>
+        					<col5><![CDATA[1]]></col5>
+        				</w2:row>
+        				<w2:row>
+        					<month><![CDATA[2월]]></month>
+        					<quarter1><![CDATA[11500]]></quarter1>
+        					<quarter2><![CDATA[28110]]></quarter2>
+        					<quarter3><![CDATA[26990]]></quarter3>
+        					<quarter4><![CDATA[12500]]></quarter4>
+        					<quarter5><![CDATA[27400]]></quarter5>
+        					<quarter6><![CDATA[20000]]></quarter6>
+        					<col5><![CDATA[2]]></col5>
+        				</w2:row>
+        				<w2:row>
+        					<month><![CDATA[3월]]></month>
+        					<quarter3><![CDATA[32700]]></quarter3>
+        					<quarter1><![CDATA[12500]]></quarter1>
+        					<quarter2><![CDATA[27400]]></quarter2>
+        					<quarter4><![CDATA[34343]]></quarter4>
+        					<quarter5><![CDATA[2225]]></quarter5>
+        					<quarter6><![CDATA[51577]]></quarter6>
+        					<col5><![CDATA[3]]></col5>
+        				</w2:row>
+        				<w2:row>
+        					<month><![CDATA[4월]]></month>
+        					<quarter3><![CDATA[12000]]></quarter3>
+        					<quarter2><![CDATA[29000]]></quarter2>
+        					<quarter1><![CDATA[10000]]></quarter1>
+        					<quarter4><![CDATA[7623]]></quarter4>
+        					<quarter5><![CDATA[5728]]></quarter5>
+        					<quarter6><![CDATA[15000]]></quarter6>
+        					<col5><![CDATA[4]]></col5>
+        				</w2:row>
+
+        			</w2:data>
+        		</w2:dataList>
+
+
+
+        	</w2:dataCollection>
+        	<w2:workflowCollection></w2:workflowCollection>
+        	<xf:submission id="submission1" ref="" target="data:json,dataList1" action="" method="post" mediatype="application/json"
+        		encoding="UTF-8" instance="" replace="" errorHandler="" customHandler="" mode="asynchronous" processMsg="" ev:submit=""
+        		ev:submitdone="" ev:submiterror="" abortTrigger="">
+        	</xf:submission>
+        </xf:model>
+        <script type="text/javascript" lazy="false"><![CDATA[
+	scwin.onpageload = function() {
+
+		var jsonData = [{
+			"month" : "1월",
+			"quarter1" : "0",
+			"quarter2" : "10000",
+			"quarter3" : "10800",
+
+			"quarter4" : "10800",
+			"quarter5" : "10800",
+			"quarter6" : "10800"
+		}, {
+			"month" : "2월",
+			"quarter1" : "11500",
+			"quarter2" : "28110",
+			"quarter3" : "26990",
+
+			"quarter4" : "12500",
+			"quarter5" : "27400",
+			"quarter6" : "20000"
+		}, {
+			"month" : "3월",
+			"quarter1" : "12500",
+			"quarter2" : "27400",
+			"quarter3" : "32700",
+
+			"quarter4" : "34343",
+			"quarter5" : "2225",
+			"quarter6" : "51577"
+		}, {
+			"month" : "4월",
+			"quarter1" : "10000",
+			"quarter2" : "29000",
+			"quarter3" : "12000",
+			"quarter4" : "7623",
+			"quarter5" : "5728",
+			"quarter6" : "15000"
+		}];
+		dataList1.setJSON(jsonData);
+
+
+
+		var data = chart1.getJSONData();
+
+		data.dataset[3].renderas = "line";
+		data.dataset[4].renderas = "line";
+		data.dataset[5].renderas = "line";
+		data.dataset[5].parentYAxis = "s";
+
+		chart1.setJSONData(data);
+
+		var chartOption = {
+			"caption" : "test",
+			"sYAxisName" : "Profit %",
+			"sYAxisMaxValue" : "50000"
+
+		};
+		chart1.setChartAttribute(chartOption);
+		chart1.draw();
+	}
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+
+    	<w2:fusionchart 
+    	accessibility="false" 
+    	chartType="MSCombiDY2D"
+    	drawType="javascript" 
+    	id="chart1" 
+    	labelNode="month"
+    	ref="data:dataList1"
+    	runflashAt="IE6,IE7,IE8" 
+    	seriesType="advanced"
+    	style="width: 500px;height: 300px;" 
+    	seriesColumns="[['quarter1','quarter2','quarter3','quarter4','quarter5','quarter6']]" 
+    	>
+    	
+    	</w2:fusionchart>
+
+    
+
+
+
+    </body>
+</html>

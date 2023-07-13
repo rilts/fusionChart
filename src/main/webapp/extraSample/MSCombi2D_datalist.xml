@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="2D Single Y Combination (MSCombi2D)">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+    				<w2:columnInfo>
+    					<w2:column dataType="text" id="month" name="month"></w2:column>
+    					<w2:column dataType="number" id="ar" name="Actual Revenue"></w2:column>
+    					<w2:column dataType="number" id="pr" name="Projected Revenue"></w2:column>
+    					<w2:column dataType="number" id="profit" name="Profit"></w2:column>
+    				</w2:columnInfo>
+    				<w2:data use="true">
+    					<w2:row>
+    						<month><![CDATA[Jan]]></month>
+    						<ar><![CDATA[16000]]></ar>
+    						<pr><![CDATA[15000]]></pr>
+    						<profit><![CDATA[4000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Feb]]></month>
+    						<ar><![CDATA[20000]]></ar>
+    						<pr><![CDATA[16000]]></pr>
+    						<profit><![CDATA[5000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Mar]]></month>
+    						<ar><![CDATA[18000]]></ar>
+    						<pr><![CDATA[17000]]></pr>
+    						<profit><![CDATA[3000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Apr]]></month>
+    						<ar><![CDATA[19000]]></ar>
+    						<pr><![CDATA[18000]]></pr>
+    						<profit><![CDATA[4000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[May]]></month>
+    						<ar><![CDATA[15000]]></ar>
+    						<pr><![CDATA[19000]]></pr>
+    						<profit><![CDATA[1000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Jun]]></month>
+    						<ar><![CDATA[21000]]></ar>
+    						<pr><![CDATA[19000]]></pr>
+    						<profit><![CDATA[7000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Jul]]></month>
+    						<ar><![CDATA[16000]]></ar>
+    						<pr><![CDATA[19000]]></pr>
+    						<profit><![CDATA[1000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Aug]]></month>
+    						<ar><![CDATA[20000]]></ar>
+    						<pr><![CDATA[19000]]></pr>
+    						<profit><![CDATA[4000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Sep]]></month>
+    						<ar><![CDATA[17000]]></ar>
+    						<pr><![CDATA[20000]]></pr>
+    						<profit><![CDATA[1000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Oct]]></month>
+    						<ar><![CDATA[25000]]></ar>
+    						<pr><![CDATA[21000]]></pr>
+    						<profit><![CDATA[8000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Nov]]></month>
+    						<ar><![CDATA[19000]]></ar>
+    						<pr><![CDATA[22000]]></pr>
+    						<profit><![CDATA[2000]]></profit>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[Dec]]></month>
+    						<ar><![CDATA[23000]]></ar>
+    						<pr><![CDATA[23000]]></pr>
+    						<profit><![CDATA[7000]]></profit>
+    					</w2:row>
+    				</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+	var data = fusionchart.getJSONData();
+	data.dataset[0].showValues = "1";
+	data.dataset[1].renderas = "line";
+	data.dataset[2].renderas = "area";
+	data.dataset[2].parentYAxis = "a";
+	
+	fusionchart.setJSONData(data);
+	//console.log(JSON.stringify(data));
+
+	var attributeOptions = {
+		caption: "Harry's SuperMart",
+        subCaption: "Sales analysis of last year",
+        xAxisname: "Month",
+        yAxisName: "Actual Revenue (In USD)",
+        numberPrefix: "$",
+        theme: "fusion",
+		aYAxisName : "Profit %",
+		aYAxisMaxValue : "9000"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions);
+	
+
+    fusionchart.draw();
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fusionchart 
+    	accessibility="false" 
+    	chartType="MSCombiDY2D"
+    	drawType="javascript" 
+    	id="fusionchart" 
+    	labelNode="month" 
+    	ref="data:dataList1" 
+    	runflashAt="IE6,IE7,IE8" 
+    	seriesType="advanced" 
+    	style="position: relative ;margin:10px;height: 300px;" 
+    	seriesColumns="[['ar', 'pr', 'profit']]"
+    	>
+    	</w2:fusionchart>
+    </body>
+</html>

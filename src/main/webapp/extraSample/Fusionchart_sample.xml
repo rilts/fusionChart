@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+    	<w2:buildDate />
+    	<xf:model>
+    		<xf:instance>
+    			<data xmlns="" />
+    		</xf:instance>
+    		<w2:dataCollection baseNode="map">
+    			<w2:dataList baseNode="list" id="dataList2" repeatNode="map" saveRemovedData="true" style="">
+    				<w2:columnInfo>
+    					<w2:column dataType="text" id="col2" name="name"></w2:column>
+    					<w2:column dataType="number" id="col3" name="vaue"></w2:column>
+    				</w2:columnInfo>
+    				<w2:data use="true">
+    					<w2:row>
+    						<col2><![CDATA[접수등록]]></col2>
+    						<col3><![CDATA[400]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[가입확정]]></col2>
+    						<col3><![CDATA[500]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[가입증서발급]]></col2>
+    						<col3><![CDATA[200]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[지급심사]]></col2>
+    						<col3><![CDATA[100]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[지급내역조회]]></col2>
+    						<col3><![CDATA[55]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[신청내역조회]]></col2>
+    						<col3><![CDATA[555]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[증서재발급]]></col2>
+    						<col3><![CDATA[22]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[해지심사]]></col2>
+    						<col3><![CDATA[23]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[111]]></col2>
+    						<col3><![CDATA[222]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[222]]></col2>
+    						<col3><![CDATA[244]]></col3>
+    					</w2:row>
+    				</w2:data>
+    			</w2:dataList>
+    			<w2:dataList baseNode="list" id="dataList3" repeatNode="map" saveRemovedData="true" style="">
+    				<w2:columnInfo>
+    					<w2:column dataType="text" id="col1" name="name"></w2:column>
+    					<w2:column dataType="text" id="col2" name="month"></w2:column>
+    					<w2:column dataType="number" id="col3" name="val"></w2:column>
+    				</w2:columnInfo>
+    				<w2:data use="true">
+    					<w2:row>
+    						<col2><![CDATA[01월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[24]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[02월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[441]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[03월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[145]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[04월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[145]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[05월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[77]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[06월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[353]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[07월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[222]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[08월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[775]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[09월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[442]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[10월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[111]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[11월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[33]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col2><![CDATA[12월]]></col2>
+    						<col1><![CDATA[홍길동]]></col1>
+    						<col3><![CDATA[444]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[01월]]></col2>
+    						<col3><![CDATA[24]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[02월]]></col2>
+    						<col3><![CDATA[13]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[03월]]></col2>
+    						<col3><![CDATA[145]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[04월]]></col2>
+    						<col3><![CDATA[113]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[05월]]></col2>
+    						<col3><![CDATA[77]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[06월]]></col2>
+    						<col3><![CDATA[444]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[07월]]></col2>
+    						<col3><![CDATA[222]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[08월]]></col2>
+    						<col3><![CDATA[775]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[09월]]></col2>
+    						<col3><![CDATA[442]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[10월]]></col2>
+    						<col3><![CDATA[135]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[11월]]></col2>
+    						<col3><![CDATA[33]]></col3>
+    					</w2:row>
+    					<w2:row>
+    						<col1><![CDATA[임꺽정]]></col1>
+    						<col2><![CDATA[12월]]></col2>
+    						<col3><![CDATA[444]]></col3>
+    					</w2:row>
+    				</w2:data>
+    			</w2:dataList>
+    		</w2:dataCollection>
+    		<w2:workflowCollection></w2:workflowCollection>
+    	</xf:model>
+    	<script type="text/javascript"><![CDATA[
+        ]]></script>
+    	<style type="text/css"><![CDATA[
+    	body{font-family:'나눔고딕',nanumgothic,'돋움',dotum,applegothic,sans-serif;font-size:12px; color:#686868;}
+    	.scroll_box {
+border:1px solid #ddd;}
+    	 ]]></style>
+    </head>
+    <body>
+    	<works>
+    		<series>
+    			<label value="방송" />
+    			<label value="영화" />
+    			<label value="도서" />
+    		</series>
+    		<data>
+    			<label value="2006" />
+    			<value value="5" />
+    			<value value="21" />
+    			<value value="100" />
+    		</data>
+    		<data>
+    			<label value="2007" />
+    			<value value="100" />
+    			<value value="0" />
+    			<value value="15" />
+    		</data>
+    		<data>
+    			<label value="2008" />
+    			<value value="200" />
+    			<value value="1200" />
+    			<value value="73" />
+    		</data>
+    		<data>
+    			<label value="2009" />
+    			<value value="500" />
+    			<value value="200" />
+    			<value value="34" />
+    		</data>
+    		<data>
+    			<label value="2010" />
+    			<value value="600" />
+    			<value value="100" />
+    			<value value="100" />
+    		</data>
+    	</works>
+    	<w2:fusionchart seriesType="simple" runflashAt="IE6,IE7,IE8" id="" chartType="Column2D"
+    		style="position: absolute;height:150px;width:250px;left:21px;top:31px;" drawType="javascript" accessibility="false"
+    		ref="data:dataList2" labelNode="" valueNode="" seriesNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart seriesType="simple" runflashAt="IE6,IE7,IE8" id="" chartType="Column3D"
+    		style="position: absolute;height:150px;width:250px;left:281px;top:30px;" drawType="javascript" accessibility="false"
+    		ref="data:dataList2" labelNode="" valueNode="" seriesNode="">
+    	</w2:fusionchart>
+
+    	<w2:fusionchart accessibility="false" chartType="Line" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:541px;top:30px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Area2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:21px;top:231px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Bar2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:281px;top:230px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Pie2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:541px;top:231px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Pie3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:21px;top:431px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Doughnut2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:281px;top:430px;"
+    		valueNode="">
+    	</w2:fusionchart>
+
+
+    	<w2:fusionchart accessibility="false" chartType="Doughnut3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:540px;top:430px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Pareto2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:21px;top:636px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Pareto3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:281px;top:635px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSColumn2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:540px;top:635px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSColumn3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:20px;top:841px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSLine" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:280px;top:840px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSBar2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:539px;top:840px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="[ charType ] default : Column2D" style="position: absolute ;width:189px;height:18px;left:55px;top:14px;"></w2:span>
+    	<w2:span id="" label="Column3D" style="position: absolute ;width:72px;height:18px;left:366px;top:13px;"></w2:span>
+    	<w2:span id="" label="Line" style="position: absolute ;width:72px;height:18px;left:626px;top:13px;"></w2:span>
+    	<w2:span id="" label="Area2D" style="position: absolute ;width:53px;height:18px;left:119px;top:215px;"></w2:span>
+    	<w2:span id="" label="Bar2D" style="position: absolute ;width:72px;height:18px;left:373px;top:214px;"></w2:span>
+    	<w2:span id="" label="Pie2D" style="position: absolute ;width:72px;height:18px;left:638px;top:214px;"></w2:span>
+    	<w2:span id="" label="Pie3D" style="position: absolute ;width:53px;height:18px;left:125px;top:415px;"></w2:span>
+    	<w2:span id="" label="Doughnut2D" style="position: absolute ;width:82px;height:18px;left:359px;top:414px;"></w2:span>
+    	<w2:span id="" label="Doughnut3D" style="position: absolute ;width:94px;height:18px;left:619px;top:414px;"></w2:span>
+    	<w2:span id="" label="Pareto2D" style="position: absolute ;width:63px;height:18px;left:114px;top:619px;"></w2:span>
+    	<w2:span id="" label="Pareto3D" style="position: absolute ;width:72px;height:18px;left:373px;top:618px;"></w2:span>
+    	<w2:span id="" label="MSColumn2D" style="position: absolute ;width:83px;height:18px;left:618px;top:618px;"></w2:span>
+    	<w2:span id="" label="MSColumn3D" style="position: absolute ;width:88px;height:18px;left:96px;top:824px;"></w2:span>
+    	<w2:span id="" label="MSLine" style="position: absolute ;width:72px;height:18px;left:360px;top:823px;"></w2:span>
+    	<w2:span id="" label="MSBar2D" style="position: absolute ;width:72px;height:18px;left:630px;top:823px;"></w2:span>
+    	<w2:fusionchart accessibility="false" chartType="MSBar3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:21px;top:1043px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSArea" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:281px;top:1042px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Marimekko" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:540px;top:1042px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="MSBar3D" style="position: absolute ;width:250px;height:18px;left:21px;top:1027px;text-align:center;"></w2:span>
+    	<w2:span id="" label="MSArea" style="position: absolute ;width:250px;height:18px;left:281px;top:1027px;text-align:center;"></w2:span>
+    	<w2:span id="" label="Marimekko" style="position: absolute ;width:250px;height:18px;left:541px;top:1027px;text-align:center;"></w2:span>
+    	<w2:fusionchart accessibility="false" chartType="StackedColumn2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:539px;top:1244px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="StackedColumn3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:280px;top:1244px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="ZoomLine" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:20px;top:1245px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="ZoomLine" style="position: absolute ;width:250px;height:18px;left:20px;top:1229px;text-align:center;"></w2:span>
+    	<w2:span id="" label="StackedColumn3D"
+    		style="position: absolute ;width:250px;height:18px;left:280px;top:1229px;text-align:center;">
+    	</w2:span>
+    	<w2:span id="" label="StackedColumn2D"
+    		style="position: absolute ;width:250px;height:18px;left:540px;top:1229px;text-align:center;">
+    	</w2:span>
+    	<w2:fusionchart accessibility="false" chartType="StackedArea2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:540px;top:1446px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="StackedBar3D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:281px;top:1446px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="StackedBar2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:21px;top:1447px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="StackedBar2D" style="position: absolute ;width:250px;height:18px;left:21px;top:1431px;text-align:center;"></w2:span>
+    	<w2:span id="" label="StackedBar3D" style="position: absolute ;width:250px;height:18px;left:281px;top:1431px;text-align:center;"></w2:span>
+    	<w2:span id="" label="StackedArea2D" style="position: absolute ;width:250px;height:18px;left:541px;top:1431px;text-align:center;"></w2:span><w2:fusionchart seriesNode="" id="" ref="data:dataList2" chartType="MSCombi2D" valueNode="" style="position: absolute;height:150px;width:250px;left:540px;top:1646px;" seriesType="advanced" drawType="javascript" labelNode="" runflashAt="IE6,IE7,IE8" accessibility="false">
+    		</w2:fusionchart><w2:fusionchart seriesNode="" id="" ref="data:dataList2" chartType="MSCombi3D" valueNode="" style="position: absolute;height:150px;width:250px;left:280px;top:1645px;" seriesType="advanced" drawType="javascript" labelNode="" runflashAt="IE6,IE7,IE8" accessibility="false">
+    		</w2:fusionchart><w2:fusionchart seriesNode="" id="" ref="data:dataList2" chartType="MSStackedColumn2D" valueNode="" style="position: absolute;height:150px;width:250px;left:21px;top:1646px;" seriesType="advanced" drawType="javascript" labelNode="" runflashAt="IE6,IE7,IE8" accessibility="false">
+    		</w2:fusionchart><w2:span id="" style="position: absolute ;width:250px;height:18px;left:21px;top:1630px;text-align:center;" label="MSStackedColumn2D">
+    		</w2:span><w2:span id="" style="position: absolute ;width:250px;height:18px;left:281px;top:1630px;text-align:center;" label="MSCombi3D"></w2:span><w2:span id="" style="position: absolute ;width:250px;height:18px;left:541px;top:1630px;text-align:center;" label="MSCombi2D"></w2:span>
+    	<w2:fusionchart seriesNode="" id="" ref="data:dataList2" chartType="MSColumnLine3D" valueNode=""
+    		style="position: absolute;height:150px;width:250px;left:22px;top:1856px;" seriesType="advanced" drawType="javascript" labelNode=""
+    		runflashAt="IE6,IE7,IE8" accessibility="false">
+    	</w2:fusionchart>
+    	<w2:fusionchart seriesNode="" id="" ref="data:dataList2" chartType="StackedColumn2DLine" valueNode=""
+    		style="position: absolute;height:150px;width:250px;left:282px;top:1855px;" seriesType="advanced" drawType="javascript" labelNode=""
+    		runflashAt="IE6,IE7,IE8" accessibility="false">
+    	</w2:fusionchart>
+    	<w2:fusionchart seriesNode="" id="" ref="data:dataList2" chartType="StackedColumn3DLine" valueNode=""
+    		style="position: absolute;height:150px;width:250px;left:543px;top:1858px;" seriesType="advanced" drawType="javascript" labelNode=""
+    		runflashAt="IE6,IE7,IE8" accessibility="false">
+    	</w2:fusionchart>
+    	<w2:span id="" style="position: absolute ;width:250px;height:18px;left:542px;top:1840px;text-align:center;"
+    		label="StackedColumn3DLine">
+    	</w2:span>
+    	<w2:span id="" style="position: absolute ;width:250px;height:18px;left:282px;top:1840px;text-align:center;"
+    		label="StackedColumn2DLine">
+    	</w2:span>
+    	<w2:span id="" style="position: absolute ;width:250px;height:18px;left:22px;top:1840px;text-align:center;" label="MSColumnLine3D">
+    	</w2:span>
+    	<w2:fusionchart accessibility="false" chartType="StackedColumn3DLineDY" drawType="javascript" id="" labelNode=""
+    		ref="data:dataList2" runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced"
+    		style="position: absolute;height:150px;width:250px;left:541px;top:2058px;" valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSColumn3DLineDY" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced" style="position: absolute;height:150px;width:250px;left:280px;top:2055px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSCombiDY2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced" style="position: absolute;height:150px;width:250px;left:20px;top:2056px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="MSCombiDY2D" style="position: absolute ;width:250px;height:18px;left:20px;top:2040px;text-align:center;">
+    	</w2:span>
+    	<w2:span id="" label="MSColumn3DLineDY"
+    		style="position: absolute ;width:250px;height:18px;left:280px;top:2040px;text-align:center;">
+    	</w2:span>
+    	<w2:span id="" label="StackedColumn3DLineDY"
+    		style="position: absolute ;width:250px;height:18px;left:540px;top:2040px;text-align:center;">
+    	</w2:span>
+    	<w2:fusionchart accessibility="false" chartType="ScrollArea2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:540px;top:2458px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="ScrollLine2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:279px;top:2455px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="ScrollColumn2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple" style="position: absolute;height:150px;width:250px;left:19px;top:2456px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="ScrollColumn2D" style="position: absolute ;width:250px;height:18px;left:19px;top:2440px;text-align:center;">
+    	</w2:span>
+    	<w2:span id="" label="ScrollLine2D" style="position: absolute ;width:250px;height:18px;left:279px;top:2440px;text-align:center;"></w2:span>
+    	<w2:span id="" label="ScrollArea2D" style="position: absolute ;width:250px;height:18px;left:539px;top:2440px;text-align:center;"></w2:span>
+    	<w2:fusionchart accessibility="false" chartType="Bubble" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced" style="position: absolute;height:150px;width:250px;left:542px;top:2258px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="Scatter" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced" style="position: absolute;height:150px;width:250px;left:281px;top:2255px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="MSStackedColumn2DLineDY" drawType="javascript" id="" labelNode=""
+    		ref="data:dataList2" runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple"
+    		style="position: absolute;height:150px;width:250px;left:21px;top:2256px;" valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="MSStackedColumn2DLineDY"
+    		style="position: absolute ;width:250px;height:18px;left:21px;top:2240px;text-align:center;">
+    	</w2:span>
+    	<w2:span id="" label="Scatter" style="position: absolute ;width:250px;height:18px;left:281px;top:2240px;text-align:center;"></w2:span>
+    	<w2:span id="" label="Bubble" style="position: absolute ;width:250px;height:18px;left:541px;top:2240px;text-align:center;"></w2:span>
+    	<w2:fusionchart accessibility="false" chartType="SSGrid" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple"
+    		style="position: absolute;height:150px;width:250px;left:19px;top:2857px;margin-bottom:20px;" valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="SSGrid" style="position: absolute ;width:250px;height:18px;left:19px;top:2841px;text-align:center;"></w2:span>
+    	<w2:fusionchart accessibility="false" chartType="ScrollCombiDY2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced" style="position: absolute;height:150px;width:250px;left:542px;top:2659px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="ScrollCombi2D" drawType="javascript" id="" labelNode="" ref="data:dataList2"
+    		runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="advanced" style="position: absolute;height:150px;width:250px;left:281px;top:2656px;"
+    		valueNode="">
+    	</w2:fusionchart>
+    	<w2:fusionchart accessibility="false" chartType="ScrollStackedColumn2D" drawType="javascript" id="" labelNode=""
+    		ref="data:dataList2" runflashAt="IE6,IE7,IE8" seriesNode="" seriesType="simple"
+    		style="position: absolute;height:150px;width:250px;left:21px;top:2657px;" valueNode="">
+    	</w2:fusionchart>
+    	<w2:span id="" label="ScrollStackedColumn2D"
+    		style="position: absolute ;width:250px;height:18px;left:21px;top:2641px;text-align:center;">
+    	</w2:span>
+    	<w2:span id="" label="ScrollCombi2D" style="position: absolute ;width:250px;height:18px;left:281px;top:2641px;text-align:center;"></w2:span>
+    	<w2:span id="" label="ScrollCombiDY2D"
+    		style="position: absolute ;width:250px;height:18px;left:541px;top:2641px;text-align:center;">
+    	</w2:span>
+    </body>
+</html>

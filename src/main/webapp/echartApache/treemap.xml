@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ev="http://www.w3.org/2001/xml-events"
+	xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>default</w2:type>
+		<w2:buildDate/>
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			</w2:dataCollection>
+			<w2:workflowCollection></w2:workflowCollection>
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+		
+		<script type="text/javascript" lazy="false" src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+	scwin.myChart1;
+	
+	scwin.onpageload = function () {
+	
+		var myChart1_id = myChart1.getID();
+
+		scwin.myChart1 = echarts.init(document.getElementById( myChart1_id ));
+		
+		$p.$.ajax({
+			type:"get",
+			url:"/echartApache/treemapData.json",
+			dataType:"json",
+			success:function(data){
+				console.log(JSON.stringify(data));
+				console.log(scwin.myChart1);
+			}
+		});
+		
+		// Specify the configuration items and data for the chart
+		var option1 = {"title":{"top":5,"left":"center","text":"How $3.7 Trillion is Spent","subtext":"Obama’s 2012 Budget Proposal"},"legend":{"data":["2012Budget","2011Budget","Growth"],"selectedMode":"single","top":55,"itemGap":5,"borderRadius":5},"tooltip":{}};
+		
+		// Display the chart using the configuration items and data just specified.
+		scwin.myChart1.setOption(option1);
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+		<xf:group class="sub_contents flex_gvw" id="grp_content" style="" ev:onclick="scwin.grp_content_onclick">
+
+			<xf:group adaptiveThreshold="" class="gvwbox wq_flx" id="" style="">
+				<xf:group id="myChart1" style="width:600px; height:400px;" class=""></xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>
