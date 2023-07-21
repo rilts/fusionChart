@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="2D Single Y Combination (MSCombi2D)">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+    				<w2:columnInfo>
+    					<w2:column dataType="text" id="kind" name="종류"></w2:column>
+    					<w2:column dataType="number" id="fd" name="펀드조정지수"></w2:column>
+    					<w2:column dataType="number" id="bm" name="BM조정지수"></w2:column>
+    				</w2:columnInfo>
+    				<w2:data use="true">
+    					<w2:row>
+    						<kind><![CDATA[20220520]]></kind>
+    						<fd><![CDATA[1]]></fd>
+    						<bm><![CDATA[1]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20220617]]></kind>
+    						<fd><![CDATA[0.975]]></fd>
+    						<bm><![CDATA[0.98]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20220715]]></kind>
+    						<fd><![CDATA[0.978]]></fd>
+    						<bm><![CDATA[0.979]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20220812]]></kind>
+    						<fd><![CDATA[1.021]]></fd>
+    						<bm><![CDATA[1]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20220908]]></kind>
+    						<fd><![CDATA[0.98]]></fd>
+    						<bm><![CDATA[0.995]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20221007]]></kind>
+    						<fd><![CDATA[0.987]]></fd>
+    						<bm><![CDATA[0.95]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20221104]]></kind>
+    						<fd><![CDATA[0.99]]></fd>
+    						<bm><![CDATA[0.95]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20221202]]></kind>
+    						<fd><![CDATA[0.98]]></fd>
+    						<bm><![CDATA[1]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20221230]]></kind>
+    						<fd><![CDATA[1]]></fd>
+    						<bm><![CDATA[0.96]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20230127]]></kind>
+    						<fd><![CDATA[1.02]]></fd>
+    						<bm><![CDATA[0.9875]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20230224]]></kind>
+    						<fd><![CDATA[1.0225]]></fd>
+    						<bm><![CDATA[0.99]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20230324]]></kind>
+    						<fd><![CDATA[1.0225]]></fd>
+    						<bm><![CDATA[0.98]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20230421]]></kind>
+    						<fd><![CDATA[1.032]]></fd>
+    						<bm><![CDATA[1.02]]></bm>
+    					</w2:row>
+    					<w2:row>
+    						<kind><![CDATA[20230519]]></kind>
+    						<fd><![CDATA[1.03]]></fd>
+    						<bm><![CDATA[1.02]]></bm>
+    					</w2:row>
+    				</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+	var data = fusionchart.getJSONData();
+	data.dataset[0].renderas = "line";
+	data.dataset[1].renderas = "line";
+
+	fusionchart.setJSONData(data);
+
+	var attributeOptions = {
+		caption: "펀드 vs BM",
+		// Style
+		animation: "1",
+		showBorder: "0",
+		canvasPadding: "30",
+		// Label
+		"labelDisplay": "rotate",
+		"slantLabel": "1",
+		// Axis
+		showXAxisLine: "1",
+		showYAxisLine: "1",
+		showYAxisValues: "1",
+		yAxisMaxValue: "1.05",
+		yAxisMinValue: "0.9",
+		// baseFont 
+		baseFont: "돋움",
+		baseFontSize: "11",
+		baseFontColor: "#212121",
+		// Legend
+		legendPosition: "top",
+		legendBorderColor: "#ffffff",
+		legendBgColor: "#ffffff",
+		legendShadow: "0",
+		legendIconScale: "1.5"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions);
+	
+
+    fusionchart.draw();
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fusionchart 
+    	accessibility="false" 
+    	chartType="MSCombi2D"
+    	drawType="javascript" 
+    	id="fusionchart" 
+    	labelNode="kind" 
+    	ref="data:dataList1" 
+    	runflashAt="IE6,IE7,IE8" 
+    	seriesType="advanced" 
+    	style="position: relative;margin: 10px;height: 400px; width: 600px;" 
+    	seriesColumns="[['fd', 'bm']]"
+    	>
+    	</w2:fusionchart>
+    </body>
+</html>

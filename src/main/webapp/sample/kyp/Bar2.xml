@@ -53,40 +53,81 @@ scwin.onpageload = function() {
 };
 
 scwin.setJson = function() {
-	var data = fusionchart.getJSONData();
+	var jsonData = {
+		categories: [
+			{
+           		category: [
+					{label: "금융"}, 
+					{label: "IT기술"},
+					{label: "의료기술"}, 
+					{label: "운송"}, 
+					{label: "완자재"}
+           		]
+	        }
+        ],
+        dataset: [
+	        {
+	        	seriesName: "잔액",
+	        	data: [
+	        		{value:  12000}, 
+	        		{value:  6000},
+	        		{value:  8000},
+	        		{value:  16000},
+	        		{value:  14000}
+	        	]
+       		},
+       		{
+	        	seriesName: "증가율",
+	        	parentYAxis: "S",
+	        	anchorRadius: "5",
+	        	data: [
+	        		{value:  16000}, 
+	        		{value:  12000},
+	        		{value:  14000},
+	        		{value:  6000},
+	        		{value:  8000}
+	        	]
+       		}
+      		]
+	};
+		
+	// setJSONData API를 이용하여 데이터를 셋팅하기 이 전에 차트 옵션들을 셋팅해야 합니다.
 
-	fusionchart.setJSONData(data);
-
-	var attributeOptions = {
-		caption: "Top Trend Sales",
+	// 차트가 draw되기 전에 customizing 함수를 사용합니다.
+	// chart element에 들어갈 옵션 입니다.
+	var options = {
 		// Style
 		animation: "1",
 		showBorder: "0",
 		canvasPadding: "30",
+		showValues: "1",
 		// Axis
 		showXAxisLine: "1",
 		showYAxisLine: "1",
-		showYAxisValues: "0",
+		showSYAxisLine: "1",
+		sFormatNumberScale: "0",
 		// baseFont 
 		baseFont: "돋움",
 		baseFontSize: "11",
 		baseFontColor: "#212121",
 		// Legend
-		legendPosition: "left",
+		legendPosition: "top",
 		legendBorderColor: "#ffffff",
 		legendBgColor: "#ffffff",
 		legendShadow: "0",
 		legendIconScale: "1.5"
 	};
-    
-	fusionchart.setChartAttribute(attributeOptions);
 	
-
-    fusionchart.draw();
+	fusionchart.setChartAttribute(options);
+	//fusionchart.setPlotColor(["#f48a40", "#0075C2", "#b75342", "#e44a00"]);
+	fusionchart.setPlotColor(["#f48a40", "#0075C2"]);
+			
+	fusionchart.setJSONData(jsonData);
+	
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<w2:fusionchart 
+    	<!--w2:fusionchart 
     	accessibility="false" 
     	chartType="MSBar2D"
     	drawType="javascript" 
@@ -95,9 +136,15 @@ scwin.setJson = function() {
     	ref="data:dataList1" 
     	runflashAt="IE6,IE7,IE8" 
     	seriesType="advanced" 
-    	style="position: relative;margin: 10px;height: 300px; width: 400px;" 
+    	style="position: relative;margin: 10px;height: 200px; width: 300px;" 
     	seriesColumns="[['ar', 'pr']]"
     	>
-    	</w2:fusionchart>
+    	</w2:fusionchart-->
+    	<w2:fusionchart 
+    	chartType="MSBar2D" 
+    	drawType="javascript" 
+    	id="fusionchart" 
+    	style="height:300px;width:100%;" 
+    	/>
     </body>
 </html>

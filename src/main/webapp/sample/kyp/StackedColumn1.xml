@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="2D Single Y Combination (MSCombi2D)">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="kind" name="종류"></w2:column>
+            			<w2:column dataType="number" id="fiveY" name="5년이상"></w2:column>
+            			<w2:column dataType="number" id="threeY" name="3년이상~5년미만"></w2:column>
+            			<w2:column dataType="number" id="twoY" name="2년이상~3년미만"></w2:column>
+            			<w2:column dataType="number" id="oneY" name="1년이상~2년미만"></w2:column>
+            			<w2:column dataType="number" id="halfY" name="180일이상~1년미만"></w2:column>
+            			<w2:column dataType="number" id="threeM" name="90일이상~180일미만"></w2:column>
+            			<w2:column dataType="number" id="oneM" name="30일이상~90일미만"></w2:column>
+            			<w2:column dataType="number" id="thirtyD" name="30일미만"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<kind><![CDATA[-30%이상~-20%미만]]></kind>
+            			</w2:row>
+            			<w2:row>
+            				<kind><![CDATA[-20%이상~-10%미만]]></kind>
+            				<oneY><![CDATA[500000000]]></oneY>
+            			</w2:row>
+            			<w2:row>
+            				<kind><![CDATA[-10%이상~0%미만]]></kind>
+            				<fiveY><![CDATA[100000000]]></fiveY>
+            				<threeY><![CDATA[1400000000]]></threeY>
+            				<twoY><![CDATA[4500000000]]></twoY>
+            				<oneY><![CDATA[200000000]]></oneY>
+            			</w2:row>
+            			<w2:row>
+            				<kind><![CDATA[0%이상~10%미만]]></kind>
+            				<fiveY><![CDATA[300000000]]></fiveY>
+            				<threeY><![CDATA[4000000000]]></threeY>
+            				<twoY><![CDATA[7200000000]]></twoY>
+            				<oneY><![CDATA[800000000]]></oneY>
+            				<halfY><![CDATA[200000000]]></halfY>
+            				<threeM><![CDATA[500000000]]></threeM>
+            				<oneM><![CDATA[200000000]]></oneM>
+            			</w2:row>
+            			<w2:row>
+            				<kind><![CDATA[10%이상~20%미만]]></kind>
+            				<fiveY><![CDATA[100000000]]></fiveY>
+            				<threeY><![CDATA[3800000000]]></threeY>
+            				<twoY><![CDATA[600000000]]></twoY>
+            			</w2:row>
+            			<w2:row>
+            				<kind><![CDATA[20%이상~30%미만]]></kind>
+            				<fiveY><![CDATA[200000000]]></fiveY>
+            				<threeY><![CDATA[1200000000]]></threeY>
+            				<twoY><![CDATA[200000000]]></twoY>
+            			</w2:row>
+            			<w2:row>
+            				<kind><![CDATA[30%이상]]></kind>
+            				<fiveY><![CDATA[800000000]]></fiveY>
+            				<threeY><![CDATA[1800000000]]></threeY>
+            				<twoY><![CDATA[300000000]]></twoY>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+	var data = fusionchart.getJSONData();
+
+
+	var attributeOptions = {
+		caption: "상품 가입기간/수익률별 가입금액 분포현황",
+		// Style
+		animation: "1",
+		showBorder: "0",
+		canvasPadding: "30",
+		// Label
+		rotateLabels: "0",
+		labelDisplay: "wrap",
+		// Axis
+		showXAxisLine: "1",
+		showYAxisLine: "1",
+		showYAxisValues: "1",
+		adjustDiv: "0",
+		yAxisMaxValue: "1400000000",
+		yAxisMinvalue: "0",
+		numDivLines: "6",
+		// baseFont 
+		baseFont: "돋움",
+		baseFontSize: "11",
+		baseFontColor: "#212121",
+		// Legend
+		legendPosition: "top",
+		legendBorderColor: "#ffffff",
+		legendBgColor: "#ffffff",
+		legendShadow: "0",
+		legendIconScale: "1.5"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions);
+	
+	fusionchart.setJSONData(data);
+
+    //fusionchart.draw();
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fusionchart 
+    	accessibility="false" 
+    	chartType="StackedColumn2D"
+    	drawType="javascript" 
+    	id="fusionchart" 
+    	labelNode="kind" 
+    	ref="data:dataList1" 
+    	runflashAt="IE6,IE7,IE8" 
+    	seriesType="advanced" 
+    	style="position: relative;margin: 10px;height: 400px; width: 600px;" 
+    	seriesColumns="[['fiveY','threeY','twoY','oneY','halfY','threeM','oneM','thirtyD']]"
+    	>
+    	</w2:fusionchart>
+    </body>
+</html>

@@ -10,35 +10,29 @@
             <w2:dataCollection baseNode="map">
             	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
     				<w2:columnInfo>
-    					<w2:column dataType="text" id="kind" name="종류"></w2:column>
-    					<w2:column dataType="number" id="ar" name="잔액"></w2:column>
-    					<w2:column dataType="number" id="pr" name="증가율"></w2:column>
+    					<w2:column dataType="text" id="kind" name="자산구분"></w2:column>
+    					<w2:column dataType="number" id="fd" name="자산구분"></w2:column>
     				</w2:columnInfo>
     				<w2:data use="true">
     					<w2:row>
-    						<kind><![CDATA[금융]]></kind>
-    						<ar><![CDATA[16000]]></ar>
-    						<pr><![CDATA[15000]]></pr>
+    						<kind><![CDATA[국내주식]]></kind>
+    						<fd><![CDATA[70.1]]></fd>
     					</w2:row>
     					<w2:row>
-    						<kind><![CDATA[IT기술]]></kind>
-    						<ar><![CDATA[20000]]></ar>
-    						<pr><![CDATA[16000]]></pr>
+    						<kind><![CDATA[해외주식]]></kind>
+    						<fd><![CDATA[17.6]]></fd>
     					</w2:row>
     					<w2:row>
-    						<kind><![CDATA[의료기술]]></kind>
-    						<ar><![CDATA[18000]]></ar>
-    						<pr><![CDATA[17000]]></pr>
+    						<kind><![CDATA[국내채권]]></kind>
+    						<fd><![CDATA[5.6]]></fd>
     					</w2:row>
     					<w2:row>
-    						<kind><![CDATA[운송]]></kind>
-    						<ar><![CDATA[19000]]></ar>
-    						<pr><![CDATA[18000]]></pr>
+    						<kind><![CDATA[해외채권]]></kind>
+    						<fd><![CDATA[5.1]]></fd>
     					</w2:row>
     					<w2:row>
-    						<kind><![CDATA[완자재]]></kind>
-    						<ar><![CDATA[15000]]></ar>
-    						<pr><![CDATA[19000]]></pr>
+    						<kind><![CDATA[기타]]></kind>
+    						<fd><![CDATA[2.5]]></fd>
     					</w2:row>
     				</w2:data>
             	</w2:dataList>
@@ -58,21 +52,25 @@ scwin.setJson = function() {
 	fusionchart.setJSONData(data);
 
 	var attributeOptions = {
-		caption: "Top Trend Sales",
+		caption: "당행잔액",
 		// Style
 		animation: "1",
 		showBorder: "0",
 		canvasPadding: "30",
+		// Label
+		showLabels: 0,
 		// Axis
 		showXAxisLine: "1",
 		showYAxisLine: "1",
-		showYAxisValues: "0",
+		showYAxisValues: "1",
+		shoSYAxisValues: "1",
 		// baseFont 
 		baseFont: "돋움",
 		baseFontSize: "11",
 		baseFontColor: "#212121",
 		// Legend
-		legendPosition: "left",
+		showLegend: "1",
+		legendPosition: "top",
 		legendBorderColor: "#ffffff",
 		legendBgColor: "#ffffff",
 		legendShadow: "0",
@@ -88,15 +86,15 @@ scwin.setJson = function() {
     <body ev:onpageload="scwin.onpageload">
     	<w2:fusionchart 
     	accessibility="false" 
-    	chartType="MSBar2D"
+    	chartType="Pie2D"
     	drawType="javascript" 
     	id="fusionchart" 
     	labelNode="kind" 
     	ref="data:dataList1" 
     	runflashAt="IE6,IE7,IE8" 
     	seriesType="advanced" 
-    	style="position: relative;margin: 10px;height: 300px; width: 400px;" 
-    	seriesColumns="[['ar', 'pr']]"
+    	style="position: relative;margin: 10px;height: 400px; width: 600px;" 
+    	seriesColumns="[['fd']]"
     	>
     	</w2:fusionchart>
     </body>

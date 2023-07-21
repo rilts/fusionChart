@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_screenName="2D Single Y Combination (MSCombi2D)">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+    				<w2:columnInfo>
+    					<w2:column dataType="text" id="month" name="종류"></w2:column>
+    					<w2:column dataType="number" id="in" name="유입액"></w2:column>
+    					<w2:column dataType="number" id="out" name="유출액"></w2:column>
+    					<w2:column dataType="number" id="net" name="순유입액"></w2:column>
+    				</w2:columnInfo>
+    				<w2:data use="true">
+    					<w2:row>
+    						<month><![CDATA[202206]]></month>
+    						<in><![CDATA[0.78]]></in>
+    						<out><![CDATA[-0.8]]></out>
+    						<net><![CDATA[-0.02]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202207]]></month>
+    						<in><![CDATA[6.1]]></in>
+    						<out><![CDATA[-6.2]]></out>
+    						<net><![CDATA[-0.1]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202208]]></month>
+    						<in><![CDATA[8.4]]></in>
+    						<out><![CDATA[-8.2]]></out>
+    						<net><![CDATA[0.2]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202209]]></month>
+    						<in><![CDATA[6.1]]></in>
+    						<out><![CDATA[-6]]></out>
+    						<net><![CDATA[0.1]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202210]]></month>
+    						<in><![CDATA[7]]></in>
+    						<out><![CDATA[-7]]></out>
+    						<net><![CDATA[0]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202211]]></month>
+    						<in><![CDATA[5]]></in>
+    						<out><![CDATA[-4]]></out>
+    						<net><![CDATA[1]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202212]]></month>
+    						<in><![CDATA[4.8]]></in>
+    						<out><![CDATA[-6]]></out>
+    						<net><![CDATA[-1.2]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202301]]></month>
+    						<in><![CDATA[4.1]]></in>
+    						<out><![CDATA[-4.6]]></out>
+    						<net><![CDATA[-0.5]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202302]]></month>
+    						<in><![CDATA[4.9]]></in>
+    						<out><![CDATA[-5.8]]></out>
+    						<net><![CDATA[-0.9]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202303]]></month>
+    						<in><![CDATA[6.9]]></in>
+    						<out><![CDATA[-6.9]]></out>
+    						<net><![CDATA[0]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202304]]></month>
+    						<in><![CDATA[5.1]]></in>
+    						<out><![CDATA[-5.9]]></out>
+    						<net><![CDATA[-0.8]]></net>
+    					</w2:row>
+    					<w2:row>
+    						<month><![CDATA[202305]]></month>
+    						<in><![CDATA[2.3]]></in>
+    						<out><![CDATA[-2.1]]></out>
+    						<net><![CDATA[0.2]]></net>
+    					</w2:row>
+    				</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	scwin.setJson();
+};
+
+scwin.setJson = function() {
+	var data = fusionchart.getJSONData();
+
+	fusionchart.setJSONData(data);
+
+	var attributeOptions = {
+		caption: "유입/유출액추이",
+		// Style
+		animation: "1",
+		showBorder: "0",
+		canvasPadding: "30",
+		// Label
+		"labelDisplay": "rotate",
+		"slantLabel": "1",
+		// Axis
+		showXAxisLine: "1",
+		showYAxisLine: "1",
+		showYAxisValues: "1",
+		yAxisMaxValue: "10.0",
+		yAxisMinValue: "-10.0",
+		numDivLines: "9",
+		// baseFont 
+		baseFont: "돋움",
+		baseFontSize: "11",
+		baseFontColor: "#212121",
+		// Legend
+		legendPosition: "top",
+		legendBorderColor: "#ffffff",
+		legendBgColor: "#ffffff",
+		legendShadow: "0",
+		legendIconScale: "1.5"
+	};
+    
+	fusionchart.setChartAttribute(attributeOptions);
+	
+
+    fusionchart.draw();
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<w2:fusionchart 
+    	accessibility="false" 
+    	chartType="MSCombi2D"
+    	drawType="javascript" 
+    	id="fusionchart" 
+    	labelNode="month" 
+    	ref="data:dataList1" 
+    	runflashAt="IE6,IE7,IE8" 
+    	seriesType="advanced" 
+    	style="position: relative;margin: 10px;height: 400px; width: 600px;" 
+    	seriesColumns="[['in', 'out', 'net']]"
+    	>
+    	</w2:fusionchart>
+    </body>
+</html>
